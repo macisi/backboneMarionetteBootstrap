@@ -1,0 +1,33 @@
+{
+    "success": true,
+    "content": [
+        {
+            "uid": "001",
+            "workno": "100",
+            "nickname": "pig",
+            "name": "jack",
+            "role": "root"
+        },
+        {
+            "uid": "002",
+            "workno": "101",
+            "nickname": "dog",
+            "name": "mary",
+            "role": "营销支持"
+        },
+        {
+            "uid": "003",
+            "workno": "102",
+            "nickname": "cat",
+            "name": "tom",
+            "role": "营销"
+        },
+        {
+            "uid": "004",
+            "workno": "103",
+            "nickname": "horse",
+            "name": "mimi",
+            "role": "无权限人员"
+        }
+    ]
+}
