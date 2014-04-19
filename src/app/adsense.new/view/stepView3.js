@@ -1,22 +1,22 @@
 /**
  * @author: biangang
- * @date: 2014/4/18
+ * @date: 2014/4/19
  */
 define([
     "templates",
-    "underscore",
-    "marionette",
-    "app/componment/tabView"
-], function (tpl, _, Marionette, TabView) {
+    "marionette"
+], function (tpl, Marionette) {
     "use strict";
 
-    var StepView1 = TabView.extend({
-        template: tpl["adsense_new_step1"],
-        events: _.extend({
+    var StepView3 = Marionette.ItemView.extend({
+        template: tpl["adsense_new_step3"],
+        events: {
             "change input": "update",
-            "click .J-next": "nextStep"
-        }, TabView.prototype.events),
+            "click .J-next": "nextStep",
+            "click .J-prev": "prevStep"
+        },
         initialize: function(){
+
         },
         update: function(e){
             this.model.set(e.target.name, e.target.value);
@@ -32,15 +32,19 @@ define([
                 console.log(this.model.validationError);
             }
         },
+        prevStep: function(e){
+            e.preventDefault();
+            this.trigger("prev");
+        },
         onClose: function(){
-            console.log("stepView1 close");
+            console.log("stepView3 close");
         },
         onShow: function(){
             this.delegateEvents();
-            console.log("stepView1 show");
+            console.log("stepView3 show");
         }
     });
 
-    return StepView1;
+    return StepView3;
 
 });

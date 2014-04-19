@@ -73,6 +73,6 @@
     </div>
 </div>
 <div class="form-action">
-    <a href="#" class="J-last">上一步</a>
-    <a href="#" class="J-prev">下一步</a>
+    <a href="#" class="J-prev">上一步</a>
+    <a href="#" class="J-next">下一步</a>
 </div>

@@ -1,6 +1,6 @@
 /**
  * @author: biangang
- * @date: 2014/4/18
+ * @date: 2014/4/19
  */
 define([
     "templates",
@@ -10,13 +10,15 @@ define([
 ], function (tpl, _, Marionette, TabView) {
     "use strict";
 
-    var StepView1 = TabView.extend({
-        template: tpl["adsense_new_step1"],
+    var StepView4 = TabView.extend({
+        template: tpl["adsense_new_step4"],
         events: _.extend({
             "change input": "update",
-            "click .J-next": "nextStep"
+            "click .J-next": "nextStep",
+            "click .J-last": "prevStep"
         }, TabView.prototype.events),
         initialize: function(){
+
         },
         update: function(e){
             this.model.set(e.target.name, e.target.value);
@@ -32,15 +34,19 @@ define([
                 console.log(this.model.validationError);
             }
         },
+        prevStep: function(e){
+            e.preventDefault();
+            this.trigger("prev");
+        },
         onClose: function(){
-            console.log("stepView1 close");
+            console.log("stepView3 close");
         },
         onShow: function(){
             this.delegateEvents();
-            console.log("stepView1 show");
+            console.log("stepView3 show");
         }
     });
 
-    return StepView1;
+    return StepView4;
 
 });

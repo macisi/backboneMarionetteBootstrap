@@ -18,7 +18,9 @@ define(function(require){
         "system_worker_table": Handlebars.compile(require("text!app/system.worker/templates/table.tpl")),
         "adsense_new_layout": Handlebars.compile(require("text!app/adsense.new/templates/layout.tpl")),
         "adsense_new_step1": Handlebars.compile(require("text!app/adsense.new/templates/step1.tpl")),
-        "adsense_new_step2": Handlebars.compile(require("text!app/adsense.new/templates/step2.tpl"))
+        "adsense_new_step2": Handlebars.compile(require("text!app/adsense.new/templates/step2.tpl")),
+        "adsense_new_step3": Handlebars.compile(require("text!app/adsense.new/templates/step3.tpl")),
+        "adsense_new_step4": Handlebars.compile(require("text!app/adsense.new/templates/step4.tpl"))
     };
 
     return tpl;

@@ -1,6 +1,5 @@
 <div class="tab-trigger">
     <span class="cur" data-role="trigger">按位置选择</span>
-    <a href=""></a><a href=""></a><a href=""></a>
     <span data-role="trigger">按尺寸选择</span>
 </div>
 <div class="tab-content" data-role="content">

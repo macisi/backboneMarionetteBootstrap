@@ -1,6 +1,6 @@
 /**
  * Created by biangang on 2014/4/18.
- * 新建广告
+ * 鏂板缓骞垮憡
  */
 define([
     "app/adsense.new/view/layout"

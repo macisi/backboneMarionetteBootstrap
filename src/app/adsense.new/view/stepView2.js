@@ -4,18 +4,17 @@
  */
 define([
     "templates",
-    "marionette",
-    "app/componment/tabView"
-], function (tpl, Marionette, TabView) {
+    "marionette"
+], function (tpl, Marionette) {
     "use strict";
 
-    var StepView2 = TabView.extend({
+    var StepView2 = Marionette.ItemView.extend({
         template: tpl["adsense_new_step2"],
-        events: _.extend({
+        events: {
             "change input": "update",
             "click .J-next": "nextStep",
-            "click .J-last": "prevStep"
-        }, TabView.prototype.events),
+            "click .J-prev": "prevStep"
+        },
         initialize: function(){
 
         },

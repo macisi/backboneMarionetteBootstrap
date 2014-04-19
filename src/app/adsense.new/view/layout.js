@@ -8,8 +8,12 @@ define([
     "app/adsense.new/model/step1",
     "app/adsense.new/view/stepView1",
     "app/adsense.new/model/step2",
-    "app/adsense.new/view/stepView2"
-], function (tpl, Marionette, _, Step1, StepView1, Step2, StepView2) {
+    "app/adsense.new/view/stepView2",
+    "app/adsense.new/model/step3",
+    "app/adsense.new/view/stepView3",
+    "app/adsense.new/model/step4",
+    "app/adsense.new/view/stepView4"
+], function (tpl, Marionette, _, Step1, StepView1, Step2, StepView2, Step3, StepView3, Step4, StepView4) {
     "use strict";
 
     var Layout = Marionette.Layout.extend({
@@ -27,13 +31,19 @@ define([
         },
 
         initialize: function(){
-            //√ø“ª≤ΩæÕ∞¥’’index¿¥»°¡À
+            //ÊØè‰∏ÄÊ≠•Â∞±ÊåâÁÖßindexÊù•Âèñ‰∫Ü
             var views = {
                 step1: new StepView1({
                     model: new Step1()
                 }),
                 step2: new StepView2({
                     model: new Step2()
+                }),
+                step3: new StepView3({
+                    model: new Step3()
+                }),
+                step4: new StepView4({
+                    model: new Step4()
                 })
             };
 
