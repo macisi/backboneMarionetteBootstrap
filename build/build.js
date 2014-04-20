@@ -3,37 +3,30 @@
  * run:
  * 1. gulp clean
  * 2. gulp prepare
- * 2. node r.js -o build.js
+ * 2. node build/r.js -o build/build.js
  */
 ({
     baseUrl: "dist",
 
     paths: {
         "jquery": "lib/jquery/dist/jquery",
-//        "handlebars": "lib/handlebars/handlebars.min",
         "handlebars": "lib/handlebars/handlebars.runtime.min",
         "templates": "app/templates",
         "underscore": "lib/underscore",
         "backbone": "lib/backbone/backbone",
-        "marionette": "lib/backbone/backbone.marionette"
+        "marionette": "lib/backbone/backbone.marionette",
+        'backbone.wreqr' : 'lib/backbone/backbone.wreqr',
+        'backbone.babysitter' : 'lib/backbone/backbone.babysitter'
     },
 
     removeCombined: false,
 
     shim: {
-        "backbone": {
-            exports: "Backbone",
-            deps: ["jquery", "underscore"]
-        },
-        "marionette": {
-            exports: "Backbone.Marionette",
-            deps: ["backbone"]
-        },
         "handlebars": {
             exports: "Handlebars"
         }
     },
-    wrapShim: true,
+//    wrapShim: true,
 
     name: "main",
 

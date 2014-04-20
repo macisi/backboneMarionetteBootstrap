@@ -9,7 +9,8 @@ var defineModule = require('gulp-define-module');
 var concat = require('gulp-concat');
 var declare = require('gulp-declare');
 var path = require('path');
-//var amdOptimize = require('amd-optimize');
+var rjs = require('gulp-requirejs');
+var uglify = require('gulp-uglify');
 
 //compile less file
 gulp.task('less', function () {
@@ -58,43 +59,30 @@ gulp.task('templates', function(){
 
 gulp.task('prepare', ['dist', 'templates']);
 
-//gulp.task("build", ['dist', 'templates'], function () {
-//
-//    amdOptimize.src("main", {
-//        baseUrl: "dist",
-//        paths: {
-//            "jquery": "lib/jquery/dist/jquery",
-//            "handlebars": "lib/handlebars/handlebars.runtime.min",
-//            "templates": "app/templates",
-//            "underscore": "lib/underscore",
-//            "backbone": "lib/backbone/backbone",
-//            "marionette": "lib/backbone/backbone.marionette"
-//        },
-//
-//        removeCombined: false,
-//
-//        shim: {
-//            "backbone": {
-//                exports: "Backbone",
-//                deps: ["jquery", "underscore"]
-//            },
-//            "marionette": {
-//                exports: "Backbone.Marionette",
-//                deps: ["backbone"]
-//            },
-//            "handlebars": {
-//                exports: "Handlebars"
-//            }
-//        },
-//
-//        findNestedDependencies: false
-////            wrapShim: true,
-//
-////            name: "main"
-//
-////            out: "dist/main.js"
-//    })
-//    .pipe(concat("main.js"))
-//    .pipe(gulp.dest("dist/"));
-//
-//});
+gulp.task('build', function() {
+    rjs({
+        baseUrl: 'dist',
+        out: 'dist/main.js',
+        paths: {
+            "jquery": "lib/jquery/dist/jquery",
+            "handlebars": "lib/handlebars/handlebars.runtime.min",
+            "templates": "app/templates",
+            "underscore": "lib/underscore",
+            "backbone": "lib/backbone/backbone",
+            "marionette": "lib/backbone/backbone.marionette",
+            'backbone.wreqr' : 'lib/backbone/backbone.wreqr',
+            'backbone.babysitter' : 'lib/backbone/backbone.babysitter'
+        },
+        removeCombined: false,
+        shim: {
+            "handlebars": {
+                exports: "Handlebars"
+            }
+        },
+        name: "main"
+    })
+        .pipe(uglify({
+            outSourceMap: true
+        }))
+        .pipe(gulp.dest('./')); // pipe it to the output DIR
+});
