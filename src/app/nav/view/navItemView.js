@@ -8,6 +8,7 @@ define([
     "use strict";
 
     var NavItemView = Marionette.ItemView.extend({
+        className: "nav-block",
         template: tpl["nav_nav"]
     });
 

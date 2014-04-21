@@ -1,25 +1,25 @@
 <div class="control-group">
     <label class="control-label" for="startDate">开始时间：</label>
     <div class="controls">
-        <input type="text" name="startDate" id="startDate">
+        <input type="text" name="startDate" id="startDate" class="field">
     </div>
     <label class="control-label" for="endDate">结束时间：</label>
     <div class="controls">
-        <label>
-            <input type="radio"> 无
+        <label class="radio">
+            <input type="radio">无
         </label>
-        <label>
+        <label class="radio">
             <input type="radio">
-            <input type="text" name="endDate">
+            <input type="text" name="endDate" class="field">
         </label>
     </div>
 </div>
 <div class="control-group">
     <label class="control-label" for="area">地域:</label>
     <div class="controls">
-        <label><input type="radio"> 不限</label>
-        <label>
-            <input type="text" name="area">
+        <label class="radio"><input type="radio">不限</label>
+        <label class="radio">
+            <input type="text" name="area" class="field">
             <select name="provinceId">
                 <option value="">请选择省市/其它</option>
             </select>
@@ -35,9 +35,9 @@
 <div class="control-group">
     <label class="control-label" for="gender">性别：</label>
     <div class="controls">
-        <label><input type="radio" name="gender">不限</label>
-        <label><input type="radio" name="gender" value="female">女性</label>
-        <label><input type="radio" name="gender" value="male">男性</label>
+        <label class="radio"><input type="radio" name="gender">不限</label>
+        <label class="radio"><input type="radio" name="gender" value="female">女性</label>
+        <label class="radio"><input type="radio" name="gender" value="male">男性</label>
     </div>
 </div>
 <div class="control-group">
@@ -73,6 +73,6 @@
     </div>
 </div>
 <div class="form-action">
-    <a href="#" class="J-prev">上一步</a>
-    <a href="#" class="J-next">下一步</a>
+    <a href="#" class="J-prev btn">上一步</a>
+    <a href="#" class="J-next btn btn-primary">下一步</a>
 </div>

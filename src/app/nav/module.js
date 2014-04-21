@@ -1,24 +1,26 @@
 /**
- * Created by biangang on 2014/4/16.
+ * @author: biangang
+ * @date: 2014/4/16
  */
 define([
+    "backbone",
     "app/nav/collection/navItems",
     "app/nav/view/navItemView",
     "app/nav/view/navItemsView"
-], function(navItems, NavItemView, NavItemsView){
+], function(Backbone, navItems, NavItemView, NavItemsView){
     "use strict";
 
     function Module(M, App){
 
-        M.addInitializer(function(){
-
-            var navItemsView = new NavItemsView({
-                collection: navItems
-            });
-
-            App.navRegion.show(navItemsView);
-
+        var navItemsView = new NavItemsView({
+            collection: navItems
         });
+
+        App.navRegion.show(navItemsView);
+
+        M.updateCurrentNav = function(path){
+            navItemsView.setCurrentNav(path);
+        };
     }
 
     return Module;

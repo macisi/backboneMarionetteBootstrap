@@ -1,14 +1,14 @@
 <div class="tab-trigger">
-    <span class="cur" data-role="trigger">按位置选择</span>
-    <span data-role="trigger">按尺寸选择</span>
+    <span class="trigger cur" data-role="trigger">按位置选择</span>
+    <span class="trigger" data-role="trigger">按尺寸选择</span>
 </div>
 <div class="tab-content" data-role="content">
     <div class="control-group">
         <label class="control-label" for="equipment">用户上网终端：</label>
         <div class="controls">
-            <label><input name="equipment" type="radio" value="pc">电脑</label>
-            <label><input name="equipment" type="radio" value="app">手机客户端</label>
-            <label><input name="equipment" type="radio" value="mobile">手机网页版</label>
+            <label class="radio"><input name="equipment" type="radio" value="pc">电脑</label>
+            <label class="radio"><input name="equipment" type="radio" value="app">手机客户端</label>
+            <label class="radio"><input name="equipment" type="radio" value="mobile">手机网页版</label>
         </div>
     </div>
     <div class="block">
@@ -59,5 +59,5 @@
     </div>
 </div>
 <div class="form-action">
-    <a href="#" class="J-next">下一步</a>
+    <a href="#" class="J-next btn btn-primary">下一步</a>
 </div>

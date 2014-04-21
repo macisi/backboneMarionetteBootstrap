@@ -1,5 +1,8 @@
 /**
- * Created by biangang on 2014/4/16.
+ * @author: biangang
+ * @date: 2014/4/16
+ * TODO:
+ * 1.不同权限的帐号登录是应该之看到对应的菜单
  */
 define(["backbone"], function(Backbone){
     "use strict";

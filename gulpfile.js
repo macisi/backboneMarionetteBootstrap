@@ -11,36 +11,28 @@ var declare = require('gulp-declare');
 var path = require('path');
 var rjs = require('gulp-requirejs');
 var uglify = require('gulp-uglify');
+var minifyCSS = require('gulp-minify-css');
 
 //compile less file
 gulp.task('less', function () {
-    gulp.src('./src/style/**/*.less')
+    gulp.src('./src/style/style.less')
         .pipe(less({
-            paths: [ path.join(__dirname, 'less', 'includes') ]
+//            paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
+        .pipe(minifyCSS())
         .pipe(gulp.dest('./dist/style'));
 });
 
 //remove dist folder
 gulp.task('clean', function() {
-    gulp.src('./dist', {read: false})
+    return gulp.src('./dist', {read: false})
         .pipe(clean());
-});
-
-//copy src to dist
-gulp.task('dist', /*['clean'],*/ function(){
-    gulp.src('./src/main.js')
-        .pipe(gulp.dest('./dist'));
-    gulp.src('./src/app/**')
-        .pipe(gulp.dest('./dist/app'));
-    gulp.src('./src/lib/**')
-        .pipe(gulp.dest('./dist/lib'));
 });
 
 //compile templates
 var tplPathReg = /^.*\\src\\app\\(.*)\\templates\\(.*).js$/;
-gulp.task('templates', function(){
-    gulp.src(['./src/app/**/*.tpl'])
+gulp.task('templates', ['clean'], function(){
+    return gulp.src(['./src/app/**/*.tpl'])
         .pipe(handlebars())
         .pipe(defineModule('plain'))
         .pipe(declare({
@@ -57,21 +49,21 @@ gulp.task('templates', function(){
         .pipe(gulp.dest('./dist/app'));
 });
 
-gulp.task('prepare', ['dist', 'templates']);
-
-gulp.task('build', function() {
+//requirejs optimizer
+gulp.task('build', ['templates'], function() {
     rjs({
-        baseUrl: 'dist',
+        baseUrl: './',
         out: 'dist/main.js',
         paths: {
-            "jquery": "lib/jquery/dist/jquery",
-            "handlebars": "lib/handlebars/handlebars.runtime.min",
-            "templates": "app/templates",
-            "underscore": "lib/underscore",
-            "backbone": "lib/backbone/backbone",
-            "marionette": "lib/backbone/backbone.marionette",
-            'backbone.wreqr' : 'lib/backbone/backbone.wreqr',
-            'backbone.babysitter' : 'lib/backbone/backbone.babysitter'
+            "app": "src/app",
+            "jquery": "src/lib/jquery/dist/jquery",
+            "handlebars": "src/lib/handlebars/handlebars.runtime.min",
+            "templates": "dist/app/templates",
+            "underscore": "src/lib/underscore",
+            "backbone": "src/lib/backbone/backbone",
+            "marionette": "src/lib/backbone/backbone.marionette",
+            'backbone.wreqr' : 'src/lib/backbone/backbone.wreqr',
+            'backbone.babysitter' : 'src/lib/backbone/backbone.babysitter'
         },
         removeCombined: false,
         shim: {
@@ -79,10 +71,10 @@ gulp.task('build', function() {
                 exports: "Handlebars"
             }
         },
-        name: "main"
+        name: "src/main"
     })
         .pipe(uglify({
             outSourceMap: true
         }))
-        .pipe(gulp.dest('./')); // pipe it to the output DIR
+        .pipe(gulp.dest('./'));
 });

@@ -1,3 +1,8 @@
+/**
+ * app controller
+ * @author: biangang
+ * @date: 2014/4/21
+ */
 define([
     "backbone",
     "marionette",
@@ -47,11 +52,20 @@ define([
     });
 
     App.on("initialize:before", function(){
-        //regist all modules here
+        //register all modules here
         _.each(modules, function(module, moduleName){
             App.module(moduleName, module);
         });
+
+        App.vent.on("navTo", function(path){
+            App.Nav.updateCurrentNav(path);
+        });
+
     });
+
+//    App.vent.on("navTo", function(navObj){
+//        App.Nav.updateCurrentNav(navObj);
+//    });
 
     App.addRegions({
         navRegion: "#J-nav",

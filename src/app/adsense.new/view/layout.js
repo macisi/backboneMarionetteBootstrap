@@ -1,5 +1,6 @@
 /**
- * Created by biangang on 2014/4/18.
+ * @author: biangang
+ * @date: 2014/4/18
  */
 define([
     "templates",
@@ -27,6 +28,7 @@ define([
         currentStep: 0,
 
         onShow: function(){
+            this.$processbar = this.$el.find(".processbar");
             this.showViewByIndex(this.currentStep);
         },
 
@@ -54,10 +56,12 @@ define([
                 this.listenTo(view, "next", this.nextView);
                 this.listenTo(view, "prev", this.prevView);
             }, this);
+
         },
 
         showViewByIndex: function(index){
             this.stepRegion.show(this.container.findByIndex(index));
+            this.setProcessbar(index);
         },
 
         nextView: function(){
@@ -68,6 +72,11 @@ define([
         prevView: function(){
             this.currentStep -= 1;
             this.showViewByIndex(this.currentStep);
+        },
+        /*更新processbar*/
+        setProcessbar: function(index){
+            this.$processbar.find(".cur").removeClass("cur");
+            this.$processbar.find("span").eq(index).addClass("cur");
         }
 
     });

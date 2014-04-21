@@ -29,9 +29,9 @@ require.config({
         "handlebars": {
             exports: "Handlebars"
         }
-    }
+    },
 
-//    deps: ["jquery", "underscore", "text", "backbone", "marionette"]
+    urlArgs: "t=" + (new Date()).getTime()
 });
 
 window.RPC = {
@@ -43,7 +43,6 @@ window.RPC = {
 
 require(["app/app"], function(App){
 
-    console.log(App);
     App.start();
 
 });

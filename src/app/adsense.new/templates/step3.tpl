@@ -32,24 +32,24 @@
 <div class="control-group">
     <label class="control-label" for="">每点击付费：</label>
     <div class="controls">
-        <input type="text">元/点击（底价0.50）
+        <input type="text" class="field">元/点击（底价0.50）
     </div>
 </div>
 <div class="control-group">
     <label class="control-label" for="">每天预算：</label>
     <div class="controls">
-        <input type="text">元/天
+        <input type="text" class="field">元/天
     </div>
 </div>
 <div class="control-group">
     <label class="control-label" for="">总预算：</label>
     <div class="controls">
-        <input type="text">天
+        <input type="text" class="field">天
     </div>
 </div>
 <div class="form-action">
-    <a href="#" class="J-prev">上一步</a>
-    <a href="#" class="J-next">下一步</a>
+    <a href="#" class="J-prev btn">上一步</a>
+    <a href="#" class="J-next btn btn-primary">下一步</a>
     <p>当前账户余额：10.00元 总预算：300.00元，还需要充值：290.00元</p>
 </div>
 <div class="rule-explain">
