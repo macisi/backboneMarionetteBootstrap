@@ -1,0 +1,64 @@
+/*
+* common defination
+* @date: 2014/4/21
+* @author: biangang
+*/
+body { color: @fontColor; font-size: 12px;}
+a {
+  text-decoration: none;
+}
+
+.g-hide {
+  display: none;
+}
+/*S:表单相关*/
+select {
+  padding: 2px;
+  border: 1px solid @fieldBorder;
+  vertical-align: middle;
+}
+.field {
+  @height: 20px;
+  padding: 0 4px;
+  height: @height;
+  line-height: @height;
+  border: 1px solid @fieldBorder;
+}
+.radio, .checkbox {
+  input {
+    margin-right: 4px;
+    margin-bottom: 2px;
+    vertical-align: middle;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 0 15px;
+  height: @btnHeight;
+  .gradient(#f7f7f7, #fff, #eee);
+  line-height: @btnHeight;
+  color: #999;
+  border: 1px solid #dbdbdb;
+  font-weight: 700;
+  .border-radius(2px);
+}
+.btn-primary {
+  .gradient(#ffe390, #ffecaa, #ffd972);
+  color: #815e15;
+  border: 1px solid #f7c53e;
+}
+/*E:表单相关*/
+
+/*S:选项卡*/
+.tab-trigger {
+  .trigger {}
+}
+.tab-content {
+
+}
+/*E:选项卡*/
+
+.wrapper {
+  margin: 0 auto;
+  width: @pageWidth;
+}

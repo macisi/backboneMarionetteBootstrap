@@ -1,0 +1,35 @@
+/*
+* the entrance of aside
+* @date: 2014/4/21
+* @author: biangang
+*/
+.side-nav {
+
+  float: left;
+  width: @sideWidth;
+  background-color: #f2f7fa;
+  border-right: 1px solid @globalBorderColor;
+
+  .nav-container {
+
+  }
+  .nav-block {
+    h2 {
+      font-size: 14px;
+    }
+  }
+
+  .nav-items {
+    li {
+      a {
+        color: @fontColor;
+      }
+      &.cur {
+        a {
+          background-color: @currentColor;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

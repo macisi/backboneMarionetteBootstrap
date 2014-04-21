@@ -1,0 +1,71 @@
+/*
+* main area
+* @date: 2014/4/21
+* @author: biangang
+*/
+.main {
+  margin-left: @sideWidth;
+  padding: 10px 15px;
+
+  .subject-name {
+    @height: 30px;
+    margin: 0;
+    height: @height;
+    line-height: @height;
+    font-size: 14px;
+    border-bottom: 1px solid @globalBorderColor;
+  }
+  /*S:步骤条*/
+  .processbar {
+    @height: 30px;
+    margin-top: 23px;
+    height: @height;
+    background: url("@{img}process-bg.png") repeat-x;
+    line-height: @height;
+    border: 1px solid #ddd;
+    font-size: 0;
+
+    span {
+      position: relative;
+      display: inline-block;
+      padding: 0 25px;
+      font-size: 14px;
+      z-index: 1;
+      i {
+        position: absolute;
+        right: -10px;
+        top: 0;
+        display: block;
+        width: 10px;
+        height: 30px;
+        background: url("@{img}process-arrow.png") no-repeat;
+        z-index: 2;
+      }
+      &.cur {
+        top: -1px;
+        height: @height + 2;
+        background: @currentColor;
+        color: #fff;
+        i {
+          top: 1px;
+          background: url("@{img}process-arrow-cur.png") no-repeat;
+        }
+      }
+    }
+
+  }
+  /*E:步骤条*/
+
+  /*S:form*/
+  .control-group {
+    .control-label {
+      float: left;
+      width: 110px;
+    }
+    .controls {
+      margin-left: 115px;
+    }
+  }
+  /*E:form*/
+
+}
