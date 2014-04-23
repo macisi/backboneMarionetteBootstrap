@@ -3,32 +3,146 @@
 * @date: 2014/4/21
 * @author: biangang
 */
-body { color: @fontColor; font-size: 12px;}
+body {
+  color: @fontColor;
+  font-size: 12px;
+}
 a {
+  color: @linkColor;
   text-decoration: none;
+  &:hover {
+    color: #f60;
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .g-hide {
   display: none;
 }
-/*S:表单相关*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.pt10 {
+  padding-top: 10px;
+}
+.pb10 {
+  padding-bottom: 10px;
+}
+.pl10 {
+  padding-left: 10px;
+}
+.pr10 {
+  padding-right: 10px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.small {
+  font-size: 12px;
+}
+.ov {
+  overflow: hidden;
+}
+.highlight {
+  color: @hightLight;
+}
+.grey {
+  color: #666;
+}
+.lightGrey {
+  color: #999;
+}
+.no-border {
+  border: 0 none!important;
+}
+.top-divide {
+  border-top: 1px solid @greyBorder;
+}
+.bottom-divide {
+  border-bottom: 1px solid @greyBorder;
+}
+.unit {
+  color: #999;
+  font-size: 12px;
+}
+.icon-home, .icon-book, .ico-warn {
+  display: inline-block;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.icon-home {
+  background: url("@{img}icon-home.png") no-repeat;
+}
+.icon-book {
+  background: url("@{img}icon-book.png") no-repeat;
+}
+.ico-warn {
+  width: 30px;
+  height: 30px;
+  background: url("@{img}icon-warn.png") no-repeat;
+}
+//S:表单相关
 select {
   padding: 2px;
+  min-width: 120px;
   border: 1px solid @fieldBorder;
   vertical-align: middle;
+  &.long {
+    width: 280px;
+  }
+}
+.area-field, .field {
+  padding: 0 4px;
+  border: 1px solid @fieldBorder;
+  .transition(.25s);
+  &:hover, &:focus, &:active {
+    border-color: @focusColor;
+    box-shadow: 0 0 5px @focusColor;
+  }
+  &:focus {
+    outline:none;
+  }
+  &.field-error {
+    border-color: @errorColor;
+    box-shadow: 0 0 3px @errorColor;
+  }
 }
 .field {
   @height: 20px;
-  padding: 0 4px;
   height: @height;
   line-height: @height;
-  border: 1px solid @fieldBorder;
+  vertical-align: middle;
+}
+.area-field {
+
 }
 .radio, .checkbox {
   input {
     margin-right: 4px;
     margin-bottom: 2px;
     vertical-align: middle;
+  }
+  & ~ .radio, & ~ .checkbox {
+    margin-left: 10px;
   }
 }
 .btn {
@@ -41,24 +155,114 @@ select {
   border: 1px solid #dbdbdb;
   font-weight: 700;
   .border-radius(2px);
+  &:hover {
+    color: #999;
+  }
+}
+.btn-small {
+  padding: 0 10px;
+  height: @smallBtnHeight;
+  line-height: @smallBtnHeight;
+  font-size: 12px;
+  font-weight: 400;
 }
 .btn-primary {
   .gradient(#ffe390, #ffecaa, #ffd972);
   color: #815e15;
   border: 1px solid #f7c53e;
+  &:hover {
+    color: #815e15;
+  }
 }
-/*E:表单相关*/
+.btn-entry {
+  .gradient(#a0b537, #abbf42, #8fa524);
+  color: #fff;
+  border: 0 none;
+  &:hover {
+    .gradient(#87992d, #92a338, #7a8c1f);
+    color: #fff;
+  }
+}
 
-/*S:选项卡*/
+.control-group {
+  @labelWidth: 90px;
+  @height: 22px;
+  padding: 5px 0;
+  .control-label {
+    float: left;
+    padding-left: 10px;
+    width: @labelWidth;
+    height: @height;
+    line-height: @height;
+  }
+  .controls {
+    margin-left: @labelWidth + 15;
+    line-height: @height;
+  }
+  .unit {
+    padding-left: 4px;
+  }
+  .required {
+    padding-right: 5px;
+    color: #f00;
+    font-style: normal;
+  }
+}
+.tip {
+  margin-top: 8px;
+  color: #999;
+}
+.inline-control {
+  overflow: hidden;
+  zoom: 1;
+  .control-group {
+    float: left;
+  }
+}
+
+.form-action {
+  margin-top: 20px;
+  padding: 15px 0 0 105px;
+  border-top: 1px solid @greyBorder;
+  .btn {
+    margin-right: 15px;
+  }
+}
+//E:表单相关
+
+//S:选项卡
 .tab-trigger {
-  .trigger {}
+  margin-bottom: 12px;
+  padding-left: 12px;
+  @height: 22px;
+  height: @height;
+  border-bottom: 1px solid @greyBorder;
+  .trigger {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    margin-right: 12px;
+    padding: 0 12px;
+    height: @height - 1;
+    line-height: @height - 1;
+    .gradient(#f7f7f7, #fafafa, #f1f1f1);
+    border: 1px solid @greyBorder;
+    cursor: pointer;
+    &.cur {
+      background: #fff;
+      font-weight: 700;
+      border-top: 2px solid #c9e2f3;
+      border-bottom-color: #fff;
+    }
+  }
 }
 .tab-content {
 
 }
-/*E:选项卡*/
+//E:选项卡
 
 .wrapper {
   margin: 0 auto;
   width: @pageWidth;
+  min-width: 1200px;
 }

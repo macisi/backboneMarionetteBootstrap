@@ -10,35 +10,35 @@ require.config({
         "underscore": "lib/underscore",
         "backbone": "lib/backbone/backbone",
         "marionette": "lib/backbone/backbone.marionette",
-        'backbone.wreqr' : 'lib/backbone/backbone.wreqr',
-        'backbone.babysitter' : 'lib/backbone/backbone.babysitter',
-        "text": "lib/text"
+        "backbone.wreqr" : "lib/backbone/backbone.wreqr",
+        "backbone.babysitter" : "lib/backbone/backbone.babysitter",
+        "dialog": "lib/artDialog/dialog",
+        "popup": "lib/artDialog/popup",
+        "drag": "lib/artDialog/drag",
+        "dialog-config": "lib/artDialog/dialog-config",
+        "text": "lib/text",
+        "json": "lib/json3.min"
     },
 
-    waitSeconds: 2,
-
     shim: {
-//        "backbone": {
-//            exports: "Backbone",
-//            deps: ["jquery", "underscore"]
-//        },
-//        "marionette": {
-//            exports: "Backbone.Marionette",
-//            deps: ["backbone"]
-//        },
         "handlebars": {
             exports: "Handlebars"
         }
     },
 
-    urlArgs: "t=" + (new Date()).getTime()
+//    urlArgs: "t=" + (new Date()).getTime(),
+
+    deps: ["json"]
 });
 
 window.RPC = {
     addRole: "../mock/system/role/add.json",
     getRoles: "../mock/system/role/get.json",
     addWorker: "../mock/system/worker/add.json",
-    getWorkers: "../mock/system/worker/get.json"
+    getWorkers: "../mock/system/worker/get.json",
+    getAdsenseList: "../mock/adsense/manage/get.json",
+    saveInfo: "../mock/finance/info/save.json",
+    getInfo: "../mock/finance/info/get.json"
 }
 
 require(["app/app"], function(App){

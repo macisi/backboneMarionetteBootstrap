@@ -14,8 +14,8 @@ define([
         template: tpl["adsense_new_step4"],
         events: _.extend({
             "change input": "update",
-            "click .J-next": "nextStep",
-            "click .J-last": "prevStep"
+            "click .J-submit": "submit",
+            "click .J-prev": "prevStep"
         }, TabView.prototype.events),
         initialize: function(){
 
@@ -23,12 +23,11 @@ define([
         update: function(e){
             this.model.set(e.target.name, e.target.value);
         },
-        nextStep: function(e){
+        submit: function(e){
             e.preventDefault();
             if (this.model.isValid()) {
                 //todo: maybe send reqeuest
-                console.log("next");
-                this.trigger("next");
+                console.log("submit");
             } else {
                 //todo: showError
                 console.log(this.model.validationError);

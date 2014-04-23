@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>BackboneMarionetteDemo</title>
+    <link rel="stylesheet/less" type="text/css" href="src/style/style.less">
+    <script>
+        less = {
+            logLevel: 0
+        };
+    </script>
+    <!--work with less.min.js-->
+    <script src="src/lib/es5-shim.min.js"></script>
+    <script src="src/lib/less.min.js"></script>
+    <script src="require.js"></script>
+</head>
+<body>
+<button id="d1">普通对话框</button>
+<button id="d2">普通对话框(遮罩)</button>
+<button id="d3">tips</button>
+<button id="d4">dialog</button>
+<button id="d5">confirm</button>
+<script>
+require.config({
+    baseUrl: "src",
+    paths: {
+        "jquery": "lib/jquery/dist/jquery",
+        "dialog": "lib/artDialog/dialog",
+        "popup": "lib/artDialog/popup",
+        "drag": "lib/artDialog/drag",
+        "dialog-config": "lib/artDialog/dialog-config"
+    },
+
+    shim: {
+        "handlebars": {
+            exports: "Handlebars"
+        }
+    },
+
+    urlArgs: "t=" + (new Date()).getTime()
+});
+require(["jquery", "dialog"], function($, dialog){
+
+    $("#d1").on("click", function(){
+        var d = dialog({
+            title: '欢迎',
+            content: '欢迎使用 artDialog 对话框组件！',
+            skin: 'haha'
+        });
+        d.show();
+    });
+
+    $("#d2").on("click", function(){
+        var d = dialog({
+            title: 'message',
+            content: '<input autofocus />'
+        });
+        d.showModal();
+    });
+
+    $("#d3").on("click", function(){
+        var d = dialog({
+            content: 'Hello World!',
+            quickClose: true// 点击空白处快速关闭
+        });
+        d.show(this);
+    });
+
+    $("#d4").on("click", function(){
+        var d = dialog({
+            title: '提示',
+            content: '按钮回调函数返回 false 则不许关闭',
+            okValue: '确定',
+            ok: function () {
+                this.title('提交中…');
+                return false;
+            },
+            cancelValue: '取消',
+            cancel: function () {}
+        });
+        d.show();
+    });
+
+    $("#d5").on("click", function(){
+        var d = dialog({
+            content: '按钮回调函数返回 false 则不许关闭',
+            okValue: '确定',
+            skin: 'ui-confirm',
+            ok: function () {
+                this.title('提交中…');
+                return false;
+            },
+            cancelValue: '取消',
+            cancel: function () {}
+        });
+        d.show();
+    });
+
+});
+</script>
+</body>
+</html>

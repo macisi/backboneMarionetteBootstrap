@@ -7,19 +7,23 @@ define([
 ], function (FormModel) {
     "use strict";
 
-    var Step1 = FormModel.extend({
+    var Step2 = FormModel.extend({
         defaults: {
-            "equipment": "",
-            "city": "",
-            "channel": "",
-            "type": "",
-            "size": ""
+            "startDate": "",
+            "endDate": "",
+            "provinceId": "",
+            "cityId": "",
+            "districtId": "",
+            "gender": "",
+            "age": "",
+            "industry": "",
+            "category": "",
+            "group": ""
         },
         validateMap: {
-//            equipment: ["required"]
         }
     });
 
-    return Step1;
+    return Step2;
 
 });

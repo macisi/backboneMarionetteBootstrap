@@ -1,6 +1,8 @@
 /**
  * @author: biangang
  * @date: 2014/4/18
+ * todo:
+ * 1. 修改的时候也进这里 需要填数据
  */
 define([
     "templates",
@@ -56,7 +58,6 @@ define([
                 this.listenTo(view, "next", this.nextView);
                 this.listenTo(view, "prev", this.prevView);
             }, this);
-
         },
 
         showViewByIndex: function(index){

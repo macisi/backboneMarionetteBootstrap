@@ -11,14 +11,7 @@ define([
         url: RPC.getWorkers,
         model: WorkerList,
         initialize: function(){
-            this.fetch({
-                context: this
-            }).done(function(res){
-                //todo: how to make it globally
-                if (res.success) {
-                    this.set(res.content);
-                }
-            });
+            this.fetch();
         }
     });
 

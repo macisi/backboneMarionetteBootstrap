@@ -2,15 +2,16 @@
  * Created by biangang on 2014/4/16.
  */
 define([
+    "marionette",
     "templates",
     "app/system.worker/view/workerFormView",
     "app/system.worker/view/workerListView",
     "app/system.worker/model/worker",
     "app/system.worker/collection/workerLists"
-], function(tpl, WorkerFormView, WorkerTableView, Worker, WorkerLists){
+], function(Marionette, tpl, WorkerFormView, WorkerTableView, Worker, WorkerLists){
    "use strict";
 
-    var Layout = Backbone.Marionette.Layout.extend({
+    var Layout = Marionette.Layout.extend({
 
         template: tpl["system_worker_layout"],
 

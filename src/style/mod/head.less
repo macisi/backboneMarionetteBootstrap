@@ -3,7 +3,38 @@
 * @date: 2014/4/21
 * @author: biangang
 */
+body {
+  background: url("@{img}bg.png") top repeat-x;
+}
 .head {
   height: @headHeight;
+  background: url("@{img}header-bg.png") right top no-repeat;
   border-bottom: 1px solid @globalBorderColor;
+  .link {
+    float: left;
+    margin-left: 300px;
+    padding-top: 26px;
+    width: 225px;
+    a {
+      padding-left: 25px;
+      line-height: 16px;
+    }
+  }
+  .account {
+    float: left;
+    padding-top: 17px;
+    color: #666;
+    em {
+      font-size: 24px;
+      color: @hightLight;
+      font-weight: 700;
+      font-style: normal;
+      vertical-align: -2px;
+    }
+  }
+  .welcome {
+    float: right;
+    margin-right: 82px;
+    padding-top: 53px;
+  }
 }

@@ -1,75 +1,85 @@
-<div class="control-group">
-    <label class="control-label" for="startDate">开始时间：</label>
-    <div class="controls">
-        <input type="text" name="startDate" id="startDate" class="field">
+<div class="tab-trigger">
+    <span class="trigger cur" data-role="trigger">按位置选择</span>
+    <span class="trigger" data-role="trigger">按尺寸选择</span>
+</div>
+<div class="tab-content" data-role="content">
+    <div class="control-group">
+        <label class="control-label" for="equipment">用户上网终端：</label>
+        <div class="controls">
+            <label class="radio"><input name="equipment" type="radio" value="pc">电脑</label>
+            <label class="radio"><input name="equipment" type="radio" value="app">手机客户端</label>
+            <label class="radio"><input name="equipment" type="radio" value="mobile">手机网页版</label>
+        </div>
     </div>
-    <label class="control-label" for="endDate">结束时间：</label>
-    <div class="controls">
-        <label class="radio">
-            <input type="radio">无
-        </label>
-        <label class="radio">
-            <input type="radio">
-            <input type="text" name="endDate" class="field">
-        </label>
+    <div class="block">
+        <div class="adsense-preview fr">
+            <h4>广告位置预览图</h4>
+            <img src="{{previewUrl}}" alt="广告位置预览图">
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="city">所属城市：</label>
+            <div class="controls">
+                <select name="city" id="city" class="long"></select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="channel">频道页：</label>
+            <div class="controls">
+                <select name="channel" id="channel" class="long"></select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="type">广告类型：</label>
+            <div class="controls">
+                <select name="type" id="type" class="long"></select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="size">广告尺寸：</label>
+            <div class="controls">
+                <select name="size" id="size" class="long"></select>
+            </div>
+        </div>
     </div>
 </div>
-<div class="control-group">
-    <label class="control-label" for="area">地域:</label>
-    <div class="controls">
-        <label class="radio"><input type="radio">不限</label>
-        <label class="radio">
-            <input type="text" name="area" class="field">
-            <select name="provinceId">
-                <option value="">请选择省市/其它</option>
-            </select>
-            <select name="cityId">
-                <option value="">请选择城市</option>
-            </select>
-            <select name="districtId">
-                <option value="">请选择区县</option>
-            </select>
-        </label>
+<div class="tab-content g-hide" data-role="content">
+    <div class="control-group">
+        <label class="control-label" for="equipment">用户上网终端：</label>
+        <div class="controls">
+            <label class="radio"><input name="equipment" type="radio" value="pc">电脑</label>
+            <label class="radio"><input name="equipment" type="radio" value="app">手机客户端</label>
+            <label class="radio"><input name="equipment" type="radio" value="mobile">手机网页版</label>
+        </div>
     </div>
-</div>
-<div class="control-group">
-    <label class="control-label" for="gender">性别：</label>
-    <div class="controls">
-        <label class="radio"><input type="radio" name="gender">不限</label>
-        <label class="radio"><input type="radio" name="gender" value="female">女性</label>
-        <label class="radio"><input type="radio" name="gender" value="male">男性</label>
-    </div>
-</div>
-<div class="control-group">
-    <label class="control-label" for="age">年龄：</label>
-    <div class="controls">
-        <select name="age" id="age">
-            <option value="">请选择年龄</option>
-        </select>
-    </div>
-</div>
-<div class="control-group">
-    <label class="control-label" for="industry">行业：</label>
-    <div class="controls">
-        <select name="industry" id="industry">
-            <option value="">请选择行业</option>
-        </select>
-    </div>
-</div>
-<div class="control-group">
-    <label class="control-label" for="category">品类：</label>
-    <div class="controls">
-        <select name="category" id="category">
-            <option value="">请选择品类</option>
-        </select>
-    </div>
-</div>
-<div class="control-group">
-    <label class="control-label" for="group">人群：</label>
-    <div class="controls">
-        <select name="group" id="group">
-            <option value="">请选择人群</option>
-        </select>
+    <div class="block">
+        <div class="adsense-preview fr">
+            <h4>广告位置预览图</h4>
+            <img src="{{previewUrl}}" alt="广告位置预览图">
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="size">广告尺寸：</label>
+            <div class="controls">
+                <select name="size" id="size" class="long"></select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="city">所属城市：</label>
+            <div class="controls">
+                <select name="city" id="city" class="long"></select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="channel">频道页：</label>
+            <div class="controls">
+                <select name="channel" id="channel" class="long"></select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="type">广告类型：</label>
+            <div class="controls">
+                <select name="type" id="type" class="long"></select>
+            </div>
+        </div>
     </div>
 </div>
 <div class="form-action">

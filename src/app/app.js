@@ -21,21 +21,19 @@ define([
         this.console = { log: function (msg) { alert(msg); } };
     }
 
-    //TODO: global modify
-//    _.extend(Backbone.Model.prototype, {
-//        parse: function(resp, options) {
-//            if (resp.success) {
-//                return resp.content;
-//            }
+    //TODO: global parse modify
+//    Backbone.Model.prototype.parse = function(resp, options) {
+//        console.log(resp)
+//        if (resp.success) {
+//            return resp.content;
 //        }
-//    });
-//    _.extend(Backbone.Collection.prototype, {
-//        parse: function(resp, options) {
-//            if (resp.success) {
-//                return resp.content;
-//            }
-//        }
-//    });
+//    };
+
+    Backbone.Collection.prototype.parse = function(resp, options) {
+        if (resp.success) {
+            return resp.content;
+        }
+    };
 
     var App = new Marionette.Application();
 

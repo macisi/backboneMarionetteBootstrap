@@ -14,58 +14,208 @@
     line-height: @height;
     font-size: 14px;
     border-bottom: 1px solid @globalBorderColor;
+    .tip {
+      font-size: 12px;
+      font-weight: 400;
+    }
   }
-  /*S:步骤条*/
+  //S:步骤条
   .processbar {
     @height: 30px;
-    margin-top: 23px;
+    margin: 23px 0 20px;
     height: @height;
     background: url("@{img}process-bg.png") repeat-x;
     line-height: @height;
-    border: 1px solid #ddd;
+    border: 1px solid @greyBorder;
     font-size: 0;
 
     span {
       position: relative;
-      display: inline-block;
+      float: left;
+
       padding: 0 25px;
       font-size: 14px;
-      z-index: 1;
       i {
         position: absolute;
-        right: -10px;
-        top: 0;
-        display: block;
-        width: 10px;
-        height: 30px;
-        background: url("@{img}process-arrow.png") no-repeat;
-        z-index: 2;
+        top: -1px;
+        display: none;
+        width: 11px;
+        height: 32px;
+        &.process-prepend {
+          left: -11px;
+          background: url("@{img}process-prepend-arrow.png") no-repeat;
+        }
+        &.process-append {
+          right: -11px;
+          background: url("@{img}process-append-arrow.png") no-repeat;
+        }
       }
       &.cur {
         top: -1px;
-        height: @height + 2;
-        background: @currentColor;
-        color: #fff;
+        left: -1px;
+        height: @height;
+        background: #dbecf4;
+        border: 1px solid #b6d7e6;
+        color: #266392;
+        font-weight: 700;
         i {
-          top: 1px;
-          background: url("@{img}process-arrow-cur.png") no-repeat;
+          display: block;
         }
       }
     }
 
   }
-  /*E:步骤条*/
+  //E:步骤条
 
-  /*S:form*/
-  .control-group {
-    .control-label {
-      float: left;
-      width: 110px;
-    }
-    .controls {
-      margin-left: 115px;
+  .adsense-preview {
+    width: 300px;
+    h4 {
+      font-size: 12px;
     }
   }
-  /*E:form*/
 
+  .bidding-rank-table {
+    margin-right: 50px;
+    margin-top: 8px;
+    width: 250px;
+    border: 1px solid @greyBorder;
+    color: #666;
+  }
+
+  .adsense-list {
+    width: 100%;
+    thead {
+      th {
+        padding: 0 8px;
+        height: 38px;
+        font-size: 12px;
+        .gradient(#f6f6f6, #fafafa, #f2f2f2);
+        text-align: left;
+      }
+    }
+    tr {
+      &:hover {
+        td {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+    td {
+      padding: 15px 8px;
+      border-bottom: 1px solid #ebebeb;
+    }
+    .unit {
+      display: block;
+      font-weight: 400;
+    }
+    .adsense_detail {
+      td {
+        padding: 10px 0 10px 50px;
+        background-color: #f9f9f9;
+        vertical-align: top;
+      }
+      &:hover {
+        td {
+          background-color: #f9f9f9;
+        }
+      }
+      h5 {
+        margin: 0 0 10px;
+        font-size: 12px;
+      }
+      ul {
+        height: 144px;
+      }
+      li {
+        @height: 24px;
+        height: @height;
+        line-height: @height;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .label {
+          padding-right: 5px;
+          color: #999;
+        }
+      }
+      .unit {
+        display: inline;
+      }
+      .preview {
+        padding-right: 50px;
+        .image {
+          padding: 4px;
+          background-color: #fff;
+          border: 1px solid @greyBorder;
+          img {
+            display: block;
+          }
+        }
+        .title {
+          color: #333;
+        }
+        .desc {
+          color: #666;
+        }
+      }
+    }
+  }
+  .finance-sumary {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+    tbody {
+      th, td {
+        padding: 8px 10px;
+        border-bottom: 1px solid #ebebeb;
+      }
+      th {
+        width: 190px;
+        text-align: left;
+      }
+    }
+    tfoot {
+      td {
+        padding: 20px 0;
+      }
+    }
+  }
+  .finance-list {
+    width: 100%;
+    th {
+      padding: 0 8px;
+      height: 24px;
+      .gradient(#f6f6f6, #fafafa, #f2f2f2);
+      border-bottom: 1px solid #ebebeb;
+      text-align: left;
+      color: #666;
+    }
+    td {
+      padding: 12px 8px;
+      border-bottom: 1px solid #ebebeb;
+    }
+  }
+}
+
+.bidding-rank-table {
+  th {
+    padding: 6px 0;
+    font-weight: 400;
+  }
+  td {
+    padding: 5px 0;
+    text-align: center;
+  }
+  .first-place {
+    padding: 2px 4px;
+    background-color: #fffce9;
+    border: 1px solid #edddab;
+    color: #c0880f;
+  }
+}
+.ui-dialog {
+  .bidding-rank-table {
+    width: 100%;
+    font-size: 12px;
+  }
 }

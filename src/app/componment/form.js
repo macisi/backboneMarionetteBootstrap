@@ -62,6 +62,11 @@ define(["backbone"], function (Backbone) {
             if (validateError) {
                 return validateError;
             }
+        },
+        parse: function(resp, options){
+            if (resp.success) {
+                return resp.content;
+            }
         }
     });
 

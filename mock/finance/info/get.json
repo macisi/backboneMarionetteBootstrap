@@ -1,0 +1,15 @@
+{
+    "success": true,
+    "content": {
+        "industryId": "001",
+        "invoice": "杭州19楼XXXX",
+        "provinceId": "",
+        "cityId": "",
+        "areaId": "",
+        "street": "文三路110号",
+        "postcode": "310000",
+        "name": "高手",
+        "mobile": "15858229847",
+        "qq": "418195138"
+    }
+}

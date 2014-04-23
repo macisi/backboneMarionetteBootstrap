@@ -4,19 +4,20 @@
  */
 define([
     "templates",
-    "marionette"
-], function (tpl, Marionette) {
+    "underscore",
+    "marionette",
+    "app/componment/tabView"
+], function (tpl, _, Marionette, TabView) {
     "use strict";
 
-    var StepView2 = Marionette.ItemView.extend({
+    var StepView1 = TabView.extend({
         template: tpl["adsense_new_step2"],
-        events: {
+        events: _.extend({
             "change input": "update",
             "click .J-next": "nextStep",
             "click .J-prev": "prevStep"
-        },
+        }, TabView.prototype.events),
         initialize: function(){
-
         },
         update: function(e){
             this.model.set(e.target.name, e.target.value);
@@ -45,6 +46,6 @@ define([
         }
     });
 
-    return StepView2;
+    return StepView1;
 
 });

@@ -1,63 +1,92 @@
-<div class="tab-trigger">
-    <span class="trigger cur" data-role="trigger">按位置选择</span>
-    <span class="trigger" data-role="trigger">按尺寸选择</span>
-</div>
-<div class="tab-content" data-role="content">
+<div class="inline-control bottom-divide pb10">
     <div class="control-group">
-        <label class="control-label" for="equipment">用户上网终端：</label>
+        <label class="control-label" for="startDate">开始时间：</label>
         <div class="controls">
-            <label class="radio"><input name="equipment" type="radio" value="pc">电脑</label>
-            <label class="radio"><input name="equipment" type="radio" value="app">手机客户端</label>
-            <label class="radio"><input name="equipment" type="radio" value="mobile">手机网页版</label>
+            <input type="text" name="startDate" id="startDate" class="field">
         </div>
     </div>
-    <div class="block">
-        <div class="adsense-preview">
-            广告位置预览图
-            <img src="null" alt="广告位置预览图">
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="city">所属城市：</label><select name="city" id="city"></select>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="channel">频道页：</label><select name="channel" id="channel"></select>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="type">广告类型：</label><select name="type" id="type"></select>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="size">广告尺寸：</label><select name="size" id="size"></select>
-        </div>
-    </div>
-</div>
-<div class="tab-content g-hide" data-role="content">
     <div class="control-group">
-        <label class="control-label" for="equipment">用户上网终端：</label>
+        <label class="control-label" for="endDate">结束时间：</label>
         <div class="controls">
-            <label><input name="equipment" type="radio" value="pc">电脑</label>
-            <label><input name="equipment" type="radio" value="app">手机客户端</label>
-            <label><input name="equipment" type="radio" value="mobile">手机网页版</label>
-        </div>
-    </div>
-    <div class="block">
-        <div class="adsense-preview">
-            广告位置预览图
-            <img src="null" alt="广告位置预览图">
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="size">广告尺寸：</label><select name="size" id="size"></select>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="city">所属城市：</label><select name="city" id="city"></select>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="channel">频道页：</label><select name="channel" id="channel"></select>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="type">广告类型：</label><select name="type" id="type"></select>
+            <label class="radio">
+                <input type="radio">无
+            </label>
+            <label class="radio">
+                <input type="radio">
+                <input type="text" name="endDate" class="field">
+            </label>
         </div>
     </div>
 </div>
+<p class="pl10"><b>目标用户：</b></p>
+<div class="control-group">
+    <label class="control-label" for="area">地域：</label>
+    <div class="controls">
+        <label class="radio"><input type="radio">不限</label>
+        <label class="radio">
+            <input type="text" name="area" class="field">
+            <select name="provinceId">
+                <option value="">请选择省市/其它</option>
+            </select>
+            <select name="cityId">
+                <option value="">请选择城市</option>
+            </select>
+            <select name="districtId">
+                <option value="">请选择区县</option>
+            </select>
+        </label>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="gender">性别：</label>
+    <div class="controls">
+        <label class="radio"><input type="radio" name="gender">不限</label>
+        <label class="radio"><input type="radio" name="gender" value="female">女性</label>
+        <label class="radio"><input type="radio" name="gender" value="male">男性</label>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="age">年龄：</label>
+    <div class="controls">
+        <select name="age" id="age">
+            <option value="">请选择年龄</option>
+        </select>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="industry">行业：</label>
+    <div class="controls">
+        <select name="industry" id="industry">
+            <option value="">请选择行业</option>
+        </select>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="category">品类：</label>
+    <div class="controls">
+        <select name="category" id="category">
+            <option value="">请选择品类</option>
+        </select>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="group">人群：</label>
+    <div class="controls">
+        <label class="checkbox"><input type="checkbox" name="group" value="不限">不限</label>
+        <label class="checkbox"><input type="checkbox" name="group" value="备孕">备孕</label>
+        <label class="checkbox"><input type="checkbox" name="group" value="孕早期">孕早期</label>
+        <label class="checkbox"><input type="checkbox" name="group" value="孕中期">孕中期</label>
+        <label class="checkbox"><input type="checkbox" name="group" value="孕晚期">孕晚期</label>
+        <label class="checkbox"><input type="checkbox" name="group" value="新生儿">新生儿</label>
+        <label class="checkbox"><input type="checkbox" name="group" value="婴儿(2-12月)">婴儿(2-12月)</label>
+        <label class="checkbox"><input type="checkbox" name="group" value="幼儿(1-3岁)">幼儿(1-3岁)</label>
+        <label class="checkbox"><input type="checkbox" name="group" value="学龄前(3-6岁)">学龄前(3-6岁)</label>
+        <div class="tip">
+            已经有<b class="highlight">8</b>个同行选择了这个用户群，估计这个用户群有<b class="highlight">120</b>人
+        </div>
+    </div>
+</div>
+
 <div class="form-action">
     <a href="#" class="J-next btn btn-primary">下一步</a>
 </div>

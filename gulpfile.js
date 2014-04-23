@@ -13,8 +13,13 @@ var rjs = require('gulp-requirejs');
 var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
 
+gulp.task('img', function(){
+    return gulp.src('./src/img/*')
+        .pipe(gulp.dest('./dist/img'));
+});
+
 //compile less file
-gulp.task('less', function () {
+gulp.task('less', ['img'], function () {
     gulp.src('./src/style/style.less')
         .pipe(less({
 //            paths: [ path.join(__dirname, 'less', 'includes') ]
@@ -39,7 +44,7 @@ gulp.task('templates', ['clean'], function(){
             root: 'tpl',
             processName: function(path){
                 var r = tplPathReg.exec(path);
-                return r.slice(1).join("_").replace(".", "_")
+                return r.slice(1).join('_').replace('.', '_')
             }
         }))
         .pipe(concat('templates.js'))
@@ -55,23 +60,30 @@ gulp.task('build', ['templates'], function() {
         baseUrl: './',
         out: 'dist/main.js',
         paths: {
-            "app": "src/app",
-            "jquery": "src/lib/jquery/dist/jquery",
-            "handlebars": "src/lib/handlebars/handlebars.runtime.min",
-            "templates": "dist/app/templates",
-            "underscore": "src/lib/underscore",
-            "backbone": "src/lib/backbone/backbone",
-            "marionette": "src/lib/backbone/backbone.marionette",
+            'app': 'src/app',
+            'jquery': 'src/lib/jquery/dist/jquery',
+            'handlebars': 'src/lib/handlebars/handlebars.runtime.min',
+            'templates': 'dist/app/templates',
+            'underscore': 'src/lib/underscore',
+            'backbone': 'src/lib/backbone/backbone',
+            'marionette': 'src/lib/backbone/backbone.marionette',
             'backbone.wreqr' : 'src/lib/backbone/backbone.wreqr',
-            'backbone.babysitter' : 'src/lib/backbone/backbone.babysitter'
+            'backbone.babysitter' : 'src/lib/backbone/backbone.babysitter',
+            'dialog': 'src/lib/artDialog/dialog',
+            'popup': 'src/lib/artDialog/popup',
+            'drag': 'src/lib/artDialog/drag',
+            'dialog-config': 'src/lib/artDialog/dialog-config',
+            "json": "src/lib/json3.min"
         },
         removeCombined: false,
         shim: {
-            "handlebars": {
-                exports: "Handlebars"
+            'handlebars': {
+                exports: 'Handlebars'
             }
         },
-        name: "src/main"
+        name: 'src/main',
+
+        deps: ['json']
     })
         .pipe(uglify({
             outSourceMap: true

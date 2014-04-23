@@ -59,7 +59,7 @@ define(["backbone"], function(Backbone){
                 },
                 {
                     name: "修改资料",
-                    path: "finance/edit"
+                    path: "finance/info?type=edit"
                 },
             ]
         }

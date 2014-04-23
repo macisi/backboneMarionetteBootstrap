@@ -9,19 +9,19 @@
     <div class="control-group">
         <label class="control-label" for="adv_name">广告名称：</label>
         <div class="controls">
-            <input name="adv_name" type="text" class="field"> 0/30
+            <input name="adv_name" type="text" class="field" size="40"><span class="unit">0/30</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label">上传图片：</label>
         <div class="controls">
-            <input type="file" name="">120×60像素，50k以内
+            <input type="file" name=""><span class="unit">120×60像素，50k以内</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="adv_link">广告链接：</label>
         <div class="controls">
-            <input name="adv_link" type="text" class="field">
+            <input name="adv_link" type="text" class="field" size="40">
         </div>
     </div>
 </div>
@@ -31,19 +31,19 @@
     <div class="control-group">
         <label class="control-label" for="adv_name">广告名称：</label>
         <div class="controls">
-            <input name="adv_name" type="text" class="field"> 0/30
+            <input name="adv_name" type="text" class="field" size="40"><span class="unit">0/30</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="adv_title">标题：</label>
         <div class="controls">
-            <input type="text" name="adv_title"> 0/30
+            <input type="text" name="adv_title" class="field" size="40"><span class="unit">0/30</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="adv_link">广告链接：</label>
         <div class="controls">
-            <input name="adv_link" type="text" class="field">
+            <input name="adv_link" type="text" class="field" size="40">
         </div>
     </div>
 </div>
@@ -53,25 +53,25 @@
     <div class="control-group">
         <label class="control-label" for="adv_name">广告名称：</label>
         <div class="controls">
-            <input name="adv_name" type="text" class="field"> 0/30
+            <input name="adv_name" type="text" class="field" size="40"><span class="unit">0/30</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="adv_title">标题：</label>
         <div class="controls">
-            <input type="text" name="adv_title" class="field"> 0/30
+            <input type="text" name="adv_title" class="field" size="40"><span class="unit">0/30</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label">上传图片：</label>
         <div class="controls">
-            <input type="file" name="">120×60像素，50k以内
+            <input type="file" name=""><span class="unit">120×60像素，50k以内</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="adv_link">广告链接：</label>
         <div class="controls">
-            <input name="adv_link" type="text" class="field">
+            <input name="adv_link" type="text" class="field" size="40">
         </div>
     </div>
 </div>
@@ -81,35 +81,36 @@
     <div class="control-group">
         <label class="control-label" for="adv_name">广告名称：</label>
         <div class="controls">
-            <input name="adv_name" type="text" class="field"> 0/30
+            <input name="adv_name" type="text" class="field"><span class="unit">0/30</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="adv_title">标题：</label>
         <div class="controls">
-            <input type="text" name="adv_title" class="field"> 0/30
+            <input type="text" name="adv_title" class="field" size="40"><span class="unit">0/30</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="adv_desc">描述：</label>
         <div class="controls">
-            <input type="text" name="adv_desc" class="field">
+            <input type="text" name="adv_desc" class="field" size="40">
         </div>
     </div>
     <div class="control-group">
         <label class="control-label">上传图片：</label>
         <div class="controls">
-            <input type="file" name="">120×60像素，50k以内
+            <input type="file" name=""><span class="unit">120×60像素，50k以内</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="adv_link">广告链接：</label>
         <div class="controls">
-            <input name="adv_link" type="text" class="field">
+            <input name="adv_link" type="text" class="field" size="40">
         </div>
     </div>
 </div>
 <!--E:图文+描述-->
 <div class="form-action">
+    <a href="#" class="J-prev btn">上一步</a>
     <a href="#" class="J-submit btn btn-primary">完成</a>
 </div>
