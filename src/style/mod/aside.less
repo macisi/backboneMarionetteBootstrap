@@ -5,12 +5,17 @@
 */
 .side-nav {
 
+  position: relative;
+  left: 0;
+
   float: left;
   margin-bottom: -999em;
   padding-bottom: 999em;
   width: @sideWidth;
   background-color: #f2f7fa;
   border-right: 1px solid @globalBorderColor;
+
+  .transition(left ease .375s);
 
   .nav-container {
     padding-top: 20px;
