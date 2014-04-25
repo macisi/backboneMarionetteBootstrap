@@ -12,9 +12,16 @@ var path = require('path');
 var rjs = require('gulp-requirejs');
 var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
+var imagemin = require('gulp-imagemin');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('img', function(){
     return gulp.src('./src/img/*')
+        .pipe(imagemin({
+            interlaced: false, // for gif
+            pngquant: true, // for png
+            progressive: true // for jpeg
+        }))
         .pipe(gulp.dest('./dist/img'));
 });
 
@@ -38,6 +45,7 @@ gulp.task('clean', function() {
 var tplPathReg = /^.*\\src\\app\\(.*)\\templates\\(.*).js$/;
 gulp.task('templates', ['clean'], function(){
     return gulp.src(['./src/app/**/*.tpl'])
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(handlebars())
         .pipe(defineModule('plain'))
         .pipe(declare({
@@ -54,17 +62,23 @@ gulp.task('templates', ['clean'], function(){
         .pipe(gulp.dest('./dist/app'));
 });
 
+//get ready for build
+gulp.task('pre-build', ['templates'], function(){
+    return gulp.src(['./src/lib/jquery/*'])
+        .pipe(gulp.dest('./dist/lib/jquery'));
+});
+
 //requirejs optimizer
-gulp.task('build', ['templates'], function() {
+gulp.task('build', ['pre-build'], function() {
     rjs({
         baseUrl: './',
         out: 'dist/main.js',
         paths: {
             'app': 'src/app',
-            'jquery': 'src/lib/jquery/dist/jquery',
+            'jquery': 'src/lib/jquery/jquery-1.11.0.min',
             'handlebars': 'src/lib/handlebars/handlebars.runtime.min',
             'templates': 'dist/app/templates',
-            'underscore': 'src/lib/underscore',
+            'underscore': 'src/lib/lodash.underscore',
             'backbone': 'src/lib/backbone/backbone',
             'marionette': 'src/lib/backbone/backbone.marionette',
             'backbone.wreqr' : 'src/lib/backbone/backbone.wreqr',
@@ -73,17 +87,18 @@ gulp.task('build', ['templates'], function() {
             'popup': 'src/lib/artDialog/popup',
             'drag': 'src/lib/artDialog/drag',
             'dialog-config': 'src/lib/artDialog/dialog-config',
-            "json": "src/lib/json3.min"
+            'json': 'src/lib/json2.min',
+            'calendar': 'http://js2.citysbs.com/0.7.5.45/forum/App.calendar'
         },
+        include: 'json',
+        exclude: ['calendar', 'jquery'],
         removeCombined: false,
         shim: {
             'handlebars': {
                 exports: 'Handlebars'
             }
         },
-        name: 'src/main',
-
-        deps: ['json']
+        name: 'src/main'
     })
         .pipe(uglify({
             outSourceMap: true

@@ -3,13 +3,14 @@
  * @date: 2014/4/22
  */
 define([
+    "marionette",
     "templates",
     "app/adsense.manage/view/adsenseListView",
     "app/adsense.manage/collection/adsenseLists"
-], function (tpl, AdsenseTableView, AdsenseLists) {
+], function (Marionette, tpl, AdsenseTableView, AdsenseLists) {
     "use strict";
 
-    var Layout = Backbone.Marionette.Layout.extend({
+    var Layout = Marionette.Layout.extend({
 
         template: tpl["adsense_manage_layout"],
 

@@ -3,9 +3,29 @@
 * @date: 2014/4/21
 * @author: biangang
 */
+.expansion {
+  .side-nav {
+    left: -100%;
+  }
+  .main {
+    margin-left: 0;
+  }
+}
+
 .main {
   margin-left: @sideWidth;
   padding: 10px 15px;
+  min-height: 400px;
+
+  .layout {
+    .transform(translateX(0));
+    opacity: 1;
+    .transition(all ease .1s);
+    &.out {
+      .transform(translateY(5%));
+      opacity: 0;
+    }
+  }
 
   .subject-name {
     @height: 30px;
@@ -28,6 +48,7 @@
     line-height: @height;
     border: 1px solid @greyBorder;
     font-size: 0;
+    overflow: hidden;
 
     span {
       position: relative;
@@ -41,13 +62,17 @@
         display: none;
         width: 11px;
         height: 32px;
+        &.process-prepend, &.process-append {
+          background-image: url(@sprite);
+          background-repeat: no-repeat;
+        }
         &.process-prepend {
           left: -11px;
-          background: url("@{img}process-prepend-arrow.png") no-repeat;
+          background-position: -16px -144px;
         }
         &.process-append {
           right: -11px;
-          background: url("@{img}process-append-arrow.png") no-repeat;
+          background-position: -80px -144px;
         }
       }
       &.cur {
@@ -60,6 +85,16 @@
         font-weight: 700;
         i {
           display: block;
+        }
+      }
+      &.past {
+        background-color: #ededed;
+        color: #999;
+        .process-prepend {
+          top: 0;
+          display: block;
+          background-position: -144px -144px;
+          z-index: 1;
         }
       }
     }
@@ -84,6 +119,7 @@
 
   .adsense-list {
     width: 100%;
+    _width: 99%;
     thead {
       th {
         padding: 0 8px;
@@ -162,6 +198,7 @@
   .finance-sumary {
     margin-top: 20px;
     width: 100%;
+    _width: 99%;
     font-size: 14px;
     color: #666;
     tbody {
@@ -182,6 +219,7 @@
   }
   .finance-list {
     width: 100%;
+    _width: 99%;
     th {
       padding: 0 8px;
       height: 24px;
@@ -216,6 +254,9 @@
 .ui-dialog {
   .bidding-rank-table {
     width: 100%;
+    _width: 99%;
     font-size: 12px;
   }
 }
+@import "pay.less";
+@import "intros.less";

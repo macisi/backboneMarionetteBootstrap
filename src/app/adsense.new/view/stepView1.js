@@ -4,21 +4,27 @@
  */
 define([
     "templates",
-    "marionette"
-], function (tpl, Marionette) {
+    "marionette",
+    "calendar"
+], function (tpl, Marionette, showcalendar) {
     "use strict";
 
     var StepView2 = Marionette.ItemView.extend({
         template: tpl["adsense_new_step1"],
         events: {
             "change input": "update",
-            "click .J-next": "nextStep"
+            "click .J-next": "nextStep",
+            "click input[data-bind='datepicker']": "setDate"
         },
         initialize: function(){
 
         },
         update: function(e){
             this.model.set(e.target.name, e.target.value);
+        },
+        setDate: function(e){
+            showcalendar(e, 0, null, 0, 0, function(date){
+            });
         },
         nextStep: function(e){
             e.preventDefault();

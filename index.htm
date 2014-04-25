@@ -3,28 +3,28 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>BackboneMarionetteDemo</title>
-    <!--S:less-->
+
+    <!--S:dev-->
     <link rel="stylesheet/less" type="text/css" href="src/style/style.less">
     <script>
         less = {
             env: 'development',
-            logLevel: 0,
-            poll: 1000
-//            dumpLineNumbers: "mediaQuery"
+            logLevel: 0
         };
     </script>
-    <!--work with less.min.js-->
     <script src="src/lib/es5-shim.min.js"></script>
     <script src="src/lib/less.min.js"></script>
-    <!--<script>less.watch();</script>-->
-    <!--E:less-->
-    <!--S:css-->
-    <!--<link rel="stylesheet" type="text/css" href="dist/style/style.css">-->
-    <!--E:css-->
     <script data-main="src/main" src="require.js"></script>
+    <!--E:dev-->
+
+    <!--S:product-->
+    <!--<link rel="stylesheet" type="text/css" href="dist/style/style.css">-->
+    <!--<script data-main="dist/main" src="require.js"></script>-->
+    <!--E:product-->
+
 </head>
 <body>
-<div class="wrapper head">
+<div class="wrapper head" id="J-head">
     <div class="link">
         <a href="#" title="首页"><i class="icon-home"></i>首页</a>
         <a href="#" title="使用教程"><i class="icon-book"></i>使用教程</a>
@@ -37,10 +37,10 @@
         <a href="#">[退出]</a>
     </div>
 </div>
-<div class="wrapper ov">
+<div class="wrapper ov" id="J-body">
     <div id="J-nav" class="side-nav">
     </div>
-    <div id="J-main" class="main"></div>
+    <div id="J-main" class="main loading"></div>
 </div>
 </body>
 </html>

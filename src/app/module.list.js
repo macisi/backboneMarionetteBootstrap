@@ -10,8 +10,10 @@ define([
     "app/adsense.manage/module",
     "app/finance.info/module",
     "app/finance.detail/module",
-    "app/finance.manage/module"
-], function(nav, systemRole, systemWorker, adsenseNew, adsenseManage, financeInfo, financeDetail, financeManage){
+    "app/finance.manage/module",
+    "app/pay/module",
+    "app/intro/module"
+], function(nav, systemRole, systemWorker, adsenseNew, adsenseManage, financeInfo, financeDetail, financeManage, pay, intro){
     "use strict";
 
     var modules = {
@@ -24,6 +26,8 @@ define([
         ,"Finance.Info": financeInfo //修改资料
         ,"Finance.Detail": financeDetail //消费明细
         ,"Finance.Manage": financeManage //支付管理
+        ,"Pay": pay //支付页面
+        ,"Intro": intro //用户首页
 
     };
 

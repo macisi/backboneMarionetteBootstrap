@@ -5,9 +5,9 @@
 define(["backbone"], function (Backbone) {
     "use strict";
 
-    var PayModel = Backbone.Model.extend({
+    var IntroModel = Backbone.Model.extend({
 
     });
 
-    return PayModel;
+    return IntroModel;
 });

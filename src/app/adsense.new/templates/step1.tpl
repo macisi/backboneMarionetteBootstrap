@@ -2,7 +2,7 @@
     <div class="control-group">
         <label class="control-label" for="startDate">开始时间：</label>
         <div class="controls">
-            <input type="text" name="startDate" id="startDate" class="field">
+            <input type="text" name="startDate" id="startDate" data-bind="datepicker" class="field">
         </div>
     </div>
     <div class="control-group">
@@ -13,8 +13,8 @@
             </label>
             <label class="radio">
                 <input type="radio">
-                <input type="text" name="endDate" class="field">
             </label>
+            <input type="text" name="endDate" class="field">
         </div>
     </div>
 </div>
@@ -25,16 +25,16 @@
         <label class="radio"><input type="radio">不限</label>
         <label class="radio">
             <input type="text" name="area" class="field">
-            <select name="provinceId">
-                <option value="">请选择省市/其它</option>
-            </select>
-            <select name="cityId">
-                <option value="">请选择城市</option>
-            </select>
-            <select name="districtId">
-                <option value="">请选择区县</option>
-            </select>
         </label>
+        <select name="provinceId">
+            <option value="">请选择省市/其它</option>
+        </select>
+        <select name="cityId">
+            <option value="">请选择城市</option>
+        </select>
+        <select name="districtId">
+            <option value="">请选择区县</option>
+        </select>
     </div>
 </div>
 <div class="control-group">
@@ -51,6 +51,7 @@
         <select name="age" id="age">
             <option value="">请选择年龄</option>
         </select>
+        <span class="unit">如果选择的用户数偏少，可以选择不限年龄</span>
     </div>
 </div>
 <div class="control-group">

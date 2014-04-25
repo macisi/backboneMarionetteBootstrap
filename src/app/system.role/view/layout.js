@@ -2,15 +2,16 @@
  * Created by biangang on 2014/4/16.
  */
 define([
+    "marionette",
     "templates",
     "app/system.role/view/roleFormView",
     "app/system.role/view/roleListView",
     "app/system.role/model/role",
     "app/system.role/collection/roleLists"
-], function(tpl, RoleFormView, RoleTableView, Role, RoleLists){
+], function(Marionette, tpl, RoleFormView, RoleTableView, Role, RoleLists){
    "use strict";
 
-    var Layout = Backbone.Marionette.Layout.extend({
+    var Layout = Marionette.Layout.extend({
 
         template: tpl["system_role_layout"],
 

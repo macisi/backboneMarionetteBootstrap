@@ -76,8 +76,9 @@ define([
         },
         /*更新processbar*/
         setProcessbar: function(index){
+            this.$processbar.find(".past").removeClass("past");
             this.$processbar.find(".cur").removeClass("cur");
-            this.$processbar.find("span").eq(index).addClass("cur");
+            this.$processbar.find("span").eq(index).addClass("cur").prevAll("span").addClass("past");
         }
 
     });

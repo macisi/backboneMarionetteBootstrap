@@ -1,5 +1,5 @@
 /**
- * @desc: ȫ������
+ * @desc: 全局配置
  * @author: biangang
  * @date: 2014/4/25
  */
@@ -28,6 +28,7 @@ define([
         }
     });
 
+    //加点模块载入动画效果
     _.extend(Marionette.Layout.prototype, {
         className: "layout out",
         onDomRefresh: function(){

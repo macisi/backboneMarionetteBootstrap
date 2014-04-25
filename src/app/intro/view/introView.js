@@ -4,33 +4,36 @@
  */
 define([
     "marionette",
-    "templates",
-    "dialog"
-], function (Marionette, tpl, dialog) {
+    "templates"
+], function (Marionette, tpl) {
     "use strict";
 
     var PayView = Marionette.ItemView.extend({
-        template: tpl["pay_pay"],
+        template: tpl["intro_intro"],
         events: {
-            "click #J-go": "redirect"
+            "click .J-prev": "showPrev",
+            "click .J-next": "showNext"
         },
-        /**
-         * 跳转到支付宝付款页面
-         */
-        redirect: function(e){
+        initialize: function(){
+        },
+        onShow: function(){
+            this.$items = this.$el.find(".slider-item");
+            this.len = this.$items.length;
+            this.cur = 0;
+        },
+        showPrev: function(e){
             e.preventDefault();
-            var d = dialog({
-                okValue: '已完成付款',
-                skin: 'ui-confirm',
-                ok: function () {
-                    window.location.hash = "finance/manage"
-                },
-                cancelValue: '重新付款',
-                cancel: function () {}
-            });
-            d.content("<div class='tac mb10'><i class='icon-warn'></i><b>请在新打开的页面完成支付</b></div>付款完成前，请不要关闭此窗口。<br>完成付款后请根据您的情况选择点击下面的按钮");
-            d.showModal();
-            //todo: 跳转地址, window.open();
+            var prev = this.cur === 0 ? this.len - 1: this.cur - 1;
+            this.$items.eq(prev).fadeIn();
+            this.$items.eq(this.cur).fadeOut();
+            this.cur = prev;
+        },
+        showNext: function(e){
+            e.preventDefault();
+            var next = this.cur === this.len - 1 ? 0: this.cur + 1;
+            this.$items.eq(next).fadeIn();
+            this.$items.eq(this.cur).fadeOut();
+            this.cur = next;
         }
     });
 

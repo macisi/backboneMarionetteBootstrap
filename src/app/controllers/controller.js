@@ -24,19 +24,23 @@ define([
                 subType: subType,
                 query: query
             }));
-            var path = [type, subType].join("/");
+            var path = [type, subType].join("/"), _module;
             query && (path += ("?" + query));
             type = type.replace(rFirstLetter, function(arg){return arg.toUpperCase()});
-            subType = subType.replace(rFirstLetter, function(arg){return arg.toUpperCase()});
+            subType = subType && subType.replace(rFirstLetter, function(arg){return arg.toUpperCase()});
 
-            if (this.App[type] && this.App[type][subType]) {
+            _module = this.App[type];
+            _module = (_module && subType) ? _module[subType]: _module;
+
+            if (_module) {
                 //stop previous current module
                 this._currentModule && this._currentModule.stop();
-                this.App[type][subType].start({query: this.parseQuery(query)});
+                _module.start({query: this.parseQuery(query)});
                 //save current module
-                this._currentModule = this.App[type][subType];
+                this._currentModule = _module;
                 //trigger nav update
                 this.App.vent.trigger("navTo", path);
+                this.App.vent.trigger("loaded");
             } else {
                 //todo: notify error url
                 console.log("error path:" + JSON.stringify({
@@ -44,6 +48,8 @@ define([
                     subType: subType,
                     query: query
                 }));
+                this.App.vent.trigger("loading");
+                this.App.mainRegion.close();
             }
         },
 

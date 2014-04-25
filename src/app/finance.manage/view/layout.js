@@ -21,7 +21,7 @@ define([
         onShow: function(){
             this.financeManage.show(new ManageView({
                 model: new Manage()
-            }))
+            }));
         }
 
     });

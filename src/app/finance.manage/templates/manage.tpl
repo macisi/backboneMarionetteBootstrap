@@ -17,9 +17,9 @@
     <tr>
         <td></td>
         <td>
-            <a class="btn btn-primary" href="#">充值</a>
-            <a class="btn" href="#">解冻</a>
-            <a href="#">提现</a>
+            <a class="btn btn-small btn-primary" id="J-recharge" href="#">充值</a>
+            <a class="btn btn-small" id="J-withdrawal" href="#">提现</a>
+            <a href="#" class="small" id="J-thaw">解冻</a>
         </td>
     </tr>
     </tfoot>
@@ -30,7 +30,7 @@
         <tr>
             <th>ID</th>
             <th>充值时间</th>
-            <th>充值金额(元)</th>
+            <th>充值金额 <span class="unit">(元)</span></th>
         </tr>
     </thead>
     <tbody>

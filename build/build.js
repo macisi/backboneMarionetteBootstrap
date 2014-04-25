@@ -12,7 +12,7 @@
         'jquery': 'lib/jquery/dist/jquery',
         'handlebars': 'lib/handlebars/handlebars.runtime.min',
         'templates': 'app/templates',
-        'underscore': 'lib/underscore',
+        'underscore': 'lib/lodash.underscore',
         'backbone': 'lib/backbone/backbone',
         'marionette': 'lib/backbone/backbone.marionette',
         'backbone.wreqr' : 'lib/backbone/backbone.wreqr',

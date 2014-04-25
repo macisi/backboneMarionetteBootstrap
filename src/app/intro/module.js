@@ -4,7 +4,7 @@
  * @desc: 用户首页
  */
 define([
-    "/view/layout"
+    "app/intro/view/layout"
 ], function (Layout) {
     "use strict";
 

@@ -51,7 +51,7 @@ define([
         suspend: function(e){
             e.preventDefault();
             var d = dialog({
-                content: "<i class=\"ico-warn\"></i>确定暂停该广告？",
+                content: "<i class=\"icon-warn\"></i>确定暂停该广告？",
                 okValue: '确定',
                 skin: 'ui-confirm',
                 ok: function () {

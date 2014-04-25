@@ -12,36 +12,15 @@ define([
 ], function(Backbone, Marionette, _, Controller, modules){
    "use strict";
 
-    //TODO: for test
-    Backbone.emulateHTTP = true;
-    Backbone.emulateJSON = true;
-
-    //fix ie's console error
-    if (typeof console == "undefined") {
-        this.console = { log: function (msg) { alert(msg); } };
-    }
-
-    //TODO: global parse modify
-//    Backbone.Model.prototype.parse = function(resp, options) {
-//        console.log(resp)
-//        if (resp.success) {
-//            return resp.content;
-//        }
-//    };
-
-    Backbone.Collection.prototype.parse = function(resp, options) {
-        if (resp.success) {
-            return resp.content;
-        }
-    };
-
     var App = new Marionette.Application();
+    var $body = $("#J-body");
 
     App.addInitializer(function(){
         //router
         new Marionette.AppRouter({
             controller: new Controller(App),
             appRoutes: {
+                ":type": "routeManage",
                 ":type/:subType": "routeManage"
             }
         });
@@ -61,14 +40,28 @@ define([
 
     });
 
-//    App.vent.on("navTo", function(navObj){
-//        App.Nav.updateCurrentNav(navObj);
-//    });
+    App.on("initialize:after", function(){
+    });
+
+    //loading 状态监听
+    App.vent.on("loading", function(){
+        App.mainRegion.$el && App.mainRegion.$el.addClass("loading");
+    });
+    App.vent.on("loaded", function(){
+        App.mainRegion.$el.removeClass("loading");
+    });
 
     App.addRegions({
         navRegion: "#J-nav",
         mainRegion: "#J-main"
     });
+    //侧栏显示隐藏切换
+    App.navRegion.hide = function(){
+        $body.addClass("expansion");
+    };
+    App.navRegion.unhide = function(){
+        $body.removeClass("expansion");
+    };
 
     return App;
 

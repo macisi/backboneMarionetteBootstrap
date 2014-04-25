@@ -5,22 +5,22 @@
 define([
     "marionette",
     "templates",
-    "./view/welcomeView",
-    "./model/welcomeModel"
-], function (Marionette, tpl, WelcomeView, WelcomeModel) {
+    "app/intro/view/introView",
+    "app/intro/model/introModel"
+], function (Marionette, tpl, IntroView, IntroModel) {
     "use strict";
 
     var Layout = Marionette.Layout.extend({
 
-        template: tpl["welcome_layout"],
+        template: tpl["intro_layout"],
 
         regions: {
-            welcomeRegion: "#J-welcome"
+            introRegion: "#J-intro"
         },
 
         onShow: function(){
-            this.welcomeRegion.show(new WelcomeView({
-                model: new WelcomeModel()
+            this.introRegion.show(new IntroView({
+                model: new IntroModel()
             }));
         }
 
