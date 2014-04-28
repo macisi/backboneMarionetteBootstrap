@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="zh-CN">
     <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
     <title>BackboneMarionetteDemo</title>
 
     <!--S:dev-->
@@ -18,10 +19,29 @@
     <!--E:dev-->
 
     <!--S:product-->
-    <!--<link rel="stylesheet" type="text/css" href="dist/style/style.css">-->
+    <!--<link rel="stylesheet" href="dist/style/style.css">-->
     <!--<script data-main="dist/main" src="require.js"></script>-->
     <!--E:product-->
-
+    <script>
+    window.RPC = {
+        //添加角色
+        addRole: "../mock/system/role/add.json",
+        //所有角色列表
+        getRoles: "../mock/system/role/get.json",
+        //添加工作人员
+        addWorker: "../mock/system/worker/add.json",
+        //取工作人员列表
+        getWorkers: "../mock/system/worker/get.json",
+        //广告管理列表
+        getAdsenseList: "../mock/adsense/manage/get.json",
+        //保存用户资料
+        saveInfo: "../mock/finance/info/save.json",
+        //取用户资料
+        getInfo: "../mock/finance/info/get.json",
+        //新建广告图片上传地址
+        uploadImage: "http://www.19lou-inc.com/user/avatar/upload"
+    };
+    </script>
 </head>
 <body>
 <div class="wrapper head" id="J-head">
@@ -38,8 +58,7 @@
     </div>
 </div>
 <div class="wrapper ov" id="J-body">
-    <div id="J-nav" class="side-nav">
-    </div>
+    <div id="J-nav" class="side-nav"></div>
     <div id="J-main" class="main loading"></div>
 </div>
 </body>

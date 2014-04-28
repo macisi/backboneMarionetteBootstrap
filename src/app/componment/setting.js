@@ -38,4 +38,9 @@ define([
             }, 50)
         }
     });
+
+
+    Marionette.Behaviors.behaviorsLookup = function() {
+        return window.Behaviors;
+    };
 });

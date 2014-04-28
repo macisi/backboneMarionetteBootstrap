@@ -39,6 +39,7 @@ ul {
 .highlight { color: @hightLight; }
 .grey { color: #666; }
 .lightGrey { color: #999; }
+.rel { position: relative;}
 .no-border { border: 0 none!important; }
 .top-divide { border-top: 1px solid @greyBorder; }
 .bottom-divide { border-bottom: 1px solid @greyBorder; }
@@ -112,9 +113,6 @@ select {
   line-height: @height;
   vertical-align: middle;
 }
-.area-field {
-
-}
 .radio, .checkbox {
   input, select {
     margin-right: 4px;
@@ -124,6 +122,14 @@ select {
   & ~ .radio, & ~ .checkbox {
     margin-left: 10px;
   }
+}
+input.file {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 0;
 }
 .btn {
   display: inline-block;

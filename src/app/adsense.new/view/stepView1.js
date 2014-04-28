@@ -3,49 +3,49 @@
  * @date: 2014/4/18
  */
 define([
+    "underscore",
     "templates",
     "marionette",
-    "calendar"
-], function (tpl, Marionette, showcalendar) {
+    "pikaday"
+], function (_, tpl, Marionette, Pikaday) {
     "use strict";
 
-    var StepView2 = Marionette.ItemView.extend({
+    var StepView1 = Marionette.ItemView.extend({
         template: tpl["adsense_new_step1"],
+        ui: {
+            "next": ".J-next",
+            "field": "input[name]"
+        },
         events: {
-            "change input": "update",
-            "click .J-next": "nextStep",
             "click input[data-bind='datepicker']": "setDate"
+        },
+        behaviors: {
+            NextStep: {},
+            FormBinding: {}
         },
         initialize: function(){
 
         },
-        update: function(e){
-            this.model.set(e.target.name, e.target.value);
-        },
         setDate: function(e){
-            showcalendar(e, 0, null, 0, 0, function(date){
-            });
-        },
-        nextStep: function(e){
-            e.preventDefault();
-            if (this.model.isValid()) {
-                //todo: maybe send reqeuest
-                console.log("next");
-                this.trigger("next");
-            } else {
-                //todo: showError
-                console.log(this.model.validationError);
-            }
-        },
-        onClose: function(){
-            console.log("stepView1 close");
         },
         onShow: function(){
             this.delegateEvents();
-            console.log("stepView1 show");
+            var _this = this;
+            this.pickers = [];
+            this.$("input[data-bind='datepicker']").each(function(){
+                _this.pickers.push(new Pikaday({
+                    field: this,
+                    minDate: new Date()
+                }));
+            });
+        },
+        onClose: function(){
+            _.forEach(this.pickers, function(picker){
+                picker.destroy();
+            });
         }
     });
 
-    return StepView2;
+    return StepView1;
 
 });

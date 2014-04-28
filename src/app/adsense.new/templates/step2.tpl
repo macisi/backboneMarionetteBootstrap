@@ -7,8 +7,6 @@
         <label class="control-label" for="equipment">用户上网终端：</label>
         <div class="controls">
             <label class="radio"><input name="equipment" type="radio" value="pc">电脑</label>
-            <label class="radio"><input name="equipment" type="radio" value="app">手机客户端</label>
-            <label class="radio"><input name="equipment" type="radio" value="mobile">手机网页版</label>
         </div>
     </div>
     <div class="block">

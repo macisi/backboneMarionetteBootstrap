@@ -21,15 +21,12 @@
             "dialog-config": "lib/artDialog/dialog-config",
             "text": "lib/text",
             "json": "lib/json2.min",
-            "calendar": "http://js2.citysbs.com/0.7.5.45/forum/App.calendar"
+            "pikaday": "lib/datepicker/pikaday"
         },
 
         shim: {
             "handlebars": {
                 exports: "Handlebars"
-            },
-            "calendar": {
-                exports: "showcalendar"
             }
         },
 
@@ -37,15 +34,6 @@
         deps: ["json"]
     });
 
-    window.RPC = {
-        addRole: "../mock/system/role/add.json",
-        getRoles: "../mock/system/role/get.json",
-        addWorker: "../mock/system/worker/add.json",
-        getWorkers: "../mock/system/worker/get.json",
-        getAdsenseList: "../mock/adsense/manage/get.json",
-        saveInfo: "../mock/finance/info/save.json",
-        getInfo: "../mock/finance/info/get.json"
-    }
 })();
 
 require(["app/app", "app/componment/setting"], function(App){

@@ -8,7 +8,8 @@ define([
     "marionette",
     "underscore",
     "app/controllers/controller",
-    "app/module.list"
+    "app/module.list",
+    "app/componment/behaviors"
 ], function(Backbone, Marionette, _, Controller, modules){
    "use strict";
 

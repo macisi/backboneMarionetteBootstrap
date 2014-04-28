@@ -14,7 +14,7 @@
             <label class="radio">
                 <input type="radio">
             </label>
-            <input type="text" name="endDate" class="field">
+            <input type="text" name="endDate" data-bind="datepicker" class="field">
         </div>
     </div>
 </div>
@@ -22,9 +22,9 @@
 <div class="control-group">
     <label class="control-label" for="area">地域：</label>
     <div class="controls">
-        <label class="radio"><input type="radio">不限</label>
+        <label class="radio"><input type="radio" name="area">不限</label>
         <label class="radio">
-            <input type="text" name="area" class="field">
+            <input type="radio" name="area">
         </label>
         <select name="provinceId">
             <option value="">请选择省市/其它</option>

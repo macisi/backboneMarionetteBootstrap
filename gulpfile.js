@@ -88,16 +88,17 @@ gulp.task('build', ['pre-build'], function() {
             'drag': 'src/lib/artDialog/drag',
             'dialog-config': 'src/lib/artDialog/dialog-config',
             'json': 'src/lib/json2.min',
-            'calendar': 'http://js2.citysbs.com/0.7.5.45/forum/App.calendar'
+            "pikaday": "src/lib/datepicker/pikaday"
         },
-        include: 'json',
-        exclude: ['calendar', 'jquery'],
+        include: ['json'],
+        exclude: ['jquery'],
         removeCombined: false,
         shim: {
             'handlebars': {
                 exports: 'Handlebars'
             }
         },
+        wrap: false,
         name: 'src/main'
     })
         .pipe(uglify({

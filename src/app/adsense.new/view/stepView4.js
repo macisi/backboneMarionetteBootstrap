@@ -6,43 +6,40 @@ define([
     "templates",
     "underscore",
     "marionette",
-    "app/componment/tabView"
-], function (tpl, _, Marionette, TabView) {
+    "app/componment/tabView",
+    "app/componment/uploader"
+], function (tpl, _, Marionette, TabView, uploader) {
     "use strict";
 
     var StepView4 = TabView.extend({
         template: tpl["adsense_new_step4"],
+        ui: {
+            "submit": ".J-submit",
+            "prev": ".J-prev",
+            "field": "input"
+        },
         events: _.extend({
-            "change input": "update",
-            "click .J-submit": "submit",
-            "click .J-prev": "prevStep"
+            "change input.file": "uploadImage"
         }, TabView.prototype.events),
+        behaviors: {
+            Submit: {},
+            PrevStep: {},
+            FormBinding: {}
+        },
         initialize: function(){
 
         },
-        update: function(e){
-            this.model.set(e.target.name, e.target.value);
-        },
-        submit: function(e){
+        uploadImage: function(e){
             e.preventDefault();
-            if (this.model.isValid()) {
-                //todo: maybe send reqeuest
-                console.log("submit");
-            } else {
-                //todo: showError
-                console.log(this.model.validationError);
-            }
+            console.log("submit to backend")
+//            var form = $(e.target).parent("form")[0];
+//            uploader(form, RPC.uploadImage, function(data){
+//                console.log(data);
+//            });
         },
-        prevStep: function(e){
-            e.preventDefault();
-            this.trigger("prev");
-        },
-        onClose: function(){
-            console.log("stepView3 close");
-        },
+
         onShow: function(){
             this.delegateEvents();
-            console.log("stepView3 show");
         }
     });
 

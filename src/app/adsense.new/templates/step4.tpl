@@ -15,7 +15,11 @@
     <div class="control-group">
         <label class="control-label">上传图片：</label>
         <div class="controls">
-            <input type="file" name=""><span class="unit">120×60像素，50k以内</span>
+            <form class="rel">
+                <label for="testPic" class="btn btn-entry btn-small">选择并上传</label>
+                <input type="file" id="testPic" name="testPic" class="file">
+                <span class="unit">120×60像素，50k以内</span>
+            </form>
         </div>
     </div>
     <div class="control-group">
