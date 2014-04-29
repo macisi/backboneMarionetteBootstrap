@@ -1,0 +1,59 @@
+{
+    "success": true,
+    "content": [
+        {
+            "id": "1",
+            "nickname": "天马漫步",
+            "ip": "192.168.1.0",
+            "company": "澳兴食品专营店",
+            "total": "1000.00",
+            "remain": "10.00",
+            "payed": "100.00",
+            "count": "3",
+            "days": "2",
+            "average_converse": "0.5%",
+            "last_converse": "0.5%",
+            "pass": "已通过",
+            "allocation": "郭明娟",
+            "marketing": "张淑清",
+            "concacted": "已联系",
+            "remark": "备注：该商家已经联系过，等待回复。联系人：张淑清 时间： 2014-04-20 14:30:06"
+        },
+        {
+            "id": "2",
+            "nickname": "天马漫步",
+            "ip": "192.168.1.0",
+            "company": "澳兴食品专营店",
+            "total": "1000.00",
+            "remain": "10.00",
+            "payed": "100.00",
+            "count": "3",
+            "days": "2",
+            "average_converse": "0.5%",
+            "last_converse": "0.5%",
+            "pass": "已通过",
+            "allocation": "郭明娟",
+            "marketing": "张淑清",
+            "concacted": "已联系",
+            "remark": "备注：该商家已经联系过，等待回复。联系人：张淑清 时间： 2014-04-20 14:30:06"
+        },
+        {
+            "id": "3",
+            "nickname": "天马漫步",
+            "ip": "192.168.1.0",
+            "company": "澳兴食品专营店",
+            "total": "1000.00",
+            "remain": "10.00",
+            "payed": "100.00",
+            "count": "3",
+            "days": "2",
+            "average_converse": "0.5%",
+            "last_converse": "0.5%",
+            "pass": "已通过",
+            "allocation": "郭明娟",
+            "marketing": "张淑清",
+            "concacted": "已联系",
+            "remark": "备注：该商家已经联系过，等待回复。联系人：张淑清 时间： 2014-04-20 14:30:06"
+        }
+    ]
+}

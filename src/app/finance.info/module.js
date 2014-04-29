@@ -20,9 +20,6 @@ define([
 
         });
 
-        M.addInitializer(function(){
-
-        });
     }
 
     return Module;

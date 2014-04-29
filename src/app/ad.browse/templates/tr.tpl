@@ -1,0 +1,13 @@
+<td>{{id}}</td>
+<td>{{createTime}}</td>
+<td>{{sid}}</td>
+<td>{{uid}}</td>
+<td>{{nickname}}</td>
+<td>{{type}}</td>
+<td>{{sign}}</td>
+<td>{{ad_id}}</td>
+<td>{{business_name}}</td>
+<td>{{business_condition}}</td>
+<td>{{match}}</td>
+<td>{{similar}}</td>
+<td>{{arg}}</td>

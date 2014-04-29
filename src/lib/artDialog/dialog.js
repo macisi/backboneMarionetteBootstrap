@@ -330,7 +330,7 @@ $.extend(prototype, {
      */
     title: function (text) {
         this._$('title').text(text);
-//        this._$('header')[text ? 'show' : 'hide']();
+        text === null && this._$('header')[text ? 'show' : 'hide']();
         return this;
     },
 

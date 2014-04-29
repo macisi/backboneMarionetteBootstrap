@@ -24,7 +24,7 @@
 require.config({
     baseUrl: "src",
     paths: {
-        "jquery": "lib/jquery/dist/jquery",
+        "jquery": "lib/jquery/jquery-1.11.0.min",
         "dialog": "lib/artDialog/dialog",
         "popup": "lib/artDialog/popup",
         "drag": "lib/artDialog/drag",
@@ -61,6 +61,7 @@ require(["jquery", "dialog"], function($, dialog){
     $("#d3").on("click", function(){
         var d = dialog({
             content: 'Hello World!',
+            title: null,
             quickClose: true// 点击空白处快速关闭
         });
         d.show(this);

@@ -5,9 +5,9 @@
 define([
     "marionette",
     "templates",
-    "app/adsense.manage/view/adsenseListView",
+    "app/adsense.manage/view/adsenseView",
     "app/adsense.manage/collection/adsenseLists"
-], function (Marionette, tpl, AdsenseTableView, AdsenseLists) {
+], function (Marionette, tpl, AdsenseView, AdsenseLists) {
     "use strict";
 
     var Layout = Marionette.Layout.extend({
@@ -19,7 +19,7 @@ define([
         },
 
         onShow: function(){
-            this.adsenseList.show(new AdsenseTableView({
+            this.adsenseList.show(new AdsenseView({
                 collection: new AdsenseLists()
             }));
         }

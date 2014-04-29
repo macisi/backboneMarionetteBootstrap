@@ -2,34 +2,31 @@
  * @author: biangang
  * @date: 2014/4/16
  */
-define([
-    "app/nav/module",
-    "app/system.role/module",
-    "app/system.worker/module",
-    "app/adsense.new/module",
-    "app/adsense.manage/module",
-    "app/finance.info/module",
-    "app/finance.detail/module",
-    "app/finance.manage/module",
-    "app/pay/module",
-    "app/intro/module"
-], function(nav, systemRole, systemWorker, adsenseNew, adsenseManage, financeInfo, financeDetail, financeManage, pay, intro){
+define(function(require){
     "use strict";
 
-    var modules = {
-
-        "Nav": nav
-        ,"System.Role": systemRole //½ÇÉ«¹ÜÀí
-        ,"System.Worker": systemWorker //¹¤×÷ÈËÔ±¹ÜÀí
-        ,"Adsense.New": adsenseNew //ĞÂ½¨¹ã¸æ
-        ,"Adsense.Manage": adsenseManage //¹ã¸æ¹ÜÀí
-        ,"Finance.Info": financeInfo //ĞŞ¸Ä×ÊÁÏ
-        ,"Finance.Detail": financeDetail //Ïû·ÑÃ÷Ï¸
-        ,"Finance.Manage": financeManage //Ö§¸¶¹ÜÀí
-        ,"Pay": pay //Ö§¸¶Ò³Ãæ
-        ,"Intro": intro //ÓÃ»§Ê×Ò³
-
+    return {
+        "Nav": require("app/nav/module")
+        //ç³»ç»Ÿç®¡ç†
+        ,"System.Role": require("app/system.role/module") //è§’è‰²ç®¡ç†
+        ,"System.Worker": require("app/system.worker/module") //å·¥ä½œäººå‘˜ç®¡ç†
+        ,"System.Business": require("app/system.business/module") //å•†å®¶ç®¡ç†
+        //å¹¿å‘Šç®¡ç†
+        ,"Ad.Log": require("app/ad.log/module") //å¹¿å‘Šæ“ä½œæ—¥å¿—
+        ,"Ad.Click": require("app/ad.click/module") //å¹¿å‘Šç‚¹å‡»æ•°æ®
+        ,"Ad.Browse": require("app/ad.browse/module") //å¹¿å‘Šæµè§ˆæ•°æ®
+        ,"Adpos.New": require("app/adpos.new/module") //æ–°å»ºå¹¿å‘Šä½
+        ,"Adpos.Manage": require("app/adpos.manage/module") //å¹¿å‘Šä½ç®¡ç†
+        ,"Adsense.Edit": require("app/adsense.edit/module") //ä¿®æ”¹å¹¿å‘Š
+        ,"Ad.Manage": require("app/Ad.Manage/module") //å¹¿å‘Šç®¡ç†
+        //å•†å®¶
+        ,"Adsense.New": require("app/adsense.new/module") //æ–°å»ºå¹¿å‘Š
+        ,"Adsense.Manage": require("app/adsense.manage/module") //å¹¿å‘Šç®¡ç†
+        ,"Finance.Info": require("app/finance.info/module") //ä¿®æ”¹èµ„æ–™
+        ,"Finance.Detail": require("app/finance.detail/module") //æ¶ˆè´¹æ˜ç»†
+        ,"Finance.Manage": require("app/finance.manage/module") //æ”¯ä»˜ç®¡ç†
+        ,"Pay": require("app/pay/module") //æ”¯ä»˜é¡µé¢
+        ,"Intro": require("app/intro/module") //ç”¨æˆ·é¦–é¡µ
     };
 
-    return modules;
 });

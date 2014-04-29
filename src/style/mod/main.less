@@ -34,7 +34,7 @@
     line-height: @height;
     font-size: 14px;
     border-bottom: 1px solid @globalBorderColor;
-    .tip {
+    .tip, .ret {
       font-size: 12px;
       font-weight: 400;
     }
@@ -102,6 +102,17 @@
   }
   //E:≤Ω÷ËÃı
 
+  .sub-title {
+    margin: 10px 0;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 2;
+    background-color: #f2f7fa;
+    border-bottom: 1px solid #c4d5df;
+    color: #266392;
+    font-size: 12px;
+  }
+
   .adsense-preview {
     width: 300px;
     h4 {
@@ -117,7 +128,7 @@
     color: #666;
   }
 
-  .adsense-list {
+  .table {
     width: 100%;
     _width: 99%;
     thead {
@@ -139,11 +150,14 @@
     td {
       padding: 15px 8px;
       border-bottom: 1px solid #ebebeb;
+      word-break: break-all;
     }
     .unit {
       display: block;
       font-weight: 400;
     }
+  }
+  .adsense-list {
     .adsense_detail {
       td {
         padding: 10px 0 10px 50px;
@@ -256,6 +270,18 @@
     width: 100%;
     _width: 99%;
     font-size: 12px;
+  }
+}
+.filters {
+  margin-top: 15px;
+  padding: 0 10px 8px;
+  background-color: #f0f6f9;
+  p {
+    margin: 0;
+    padding: 8px 0 0;
+  }
+  input, select {
+    margin: 0 4px;
   }
 }
 @import "pay.less";

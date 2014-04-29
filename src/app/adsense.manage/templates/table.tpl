@@ -1,4 +1,4 @@
-<table class="adsense-list">
+<table class="adsense-list mt10 table">
     <thead>
     <tr>
         <th>ID</th>

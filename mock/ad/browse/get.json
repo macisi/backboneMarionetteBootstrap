@@ -1,0 +1,50 @@
+{
+    "success": true,
+    "content": [
+        {
+            "id": "1",
+            "createTime": "2014-04-03 14:10:50",
+            "sid": "001",
+            "uid": "001",
+            "nickname": "XXX",
+            "type": "精准匹配 ",
+            "sign": "重庆入城口中部横幅960*60-2",
+            "ad_id": "chongqing_cityEnterMouth_streamer_adv_980*60_5 ",
+            "business_name": "七格格",
+            "business_condition": "投放条件",
+            "match": "匹配项",
+            "similar": "1",
+            "arg": "点击参数"
+        },
+        {
+            "id": "2",
+            "createTime": "2014-04-03 14:10:50",
+            "sid": "002",
+            "uid": "002",
+            "nickname": "XXX",
+            "type": "精准匹配 ",
+            "sign": "重庆入城口中部横幅960*60-2",
+            "ad_id": "chongqing_cityEnterMouth_streamer_adv_980*60_5 ",
+            "business_name": "七格格",
+            "business_condition": "投放条件",
+            "match": "匹配项",
+            "similar": "1",
+            "arg": "点击参数"
+        },
+        {
+            "id": "3",
+            "createTime": "2014-04-03 14:10:50",
+            "sid": "003",
+            "uid": "003",
+            "nickname": "XXX",
+            "type": "精准匹配 ",
+            "sign": "重庆入城口中部横幅960*60-2",
+            "ad_id": "chongqing_cityEnterMouth_streamer_adv_980*60_5 ",
+            "business_name": "七格格",
+            "business_condition": "投放条件",
+            "match": "匹配项",
+            "similar": "1",
+            "arg": "点击参数"
+        }
+    ]
+}

@@ -1,23 +1,33 @@
-<div>
-    <label for="uid">19楼uid</label>
-    <input name="uid" type="text" value="{{uid}}">
+<div class="control-group">
+    <label class="control-label" for="uid">19楼uid</label>
+    <div class="controls">
+        <input name="uid" type="text" class="field" value="{{uid}}">
+    </div>
 </div>
-<div>
-    <label for="nickname">19楼昵称</label>
-    <input name="nickname" type="text" value="{{nickname}}">
+<div class="control-group">
+    <label class="control-label" for="nickname">19楼昵称</label>
+    <div class="controls">
+        <input name="nickname" type="text" class="field" value="{{nickname}}">
+    </div>
 </div>
-<div>
-    <label for="workno">工号</label>
-    <input name="workno" type="text" value="{{workno}}">
+<div class="control-group">
+    <label class="control-label" for="workno">工号</label>
+    <div class="controls">
+        <input name="workno" type="text" class="field" value="{{workno}}">
+    </div>
 </div>
-<div>
-    <label for="name">姓名</label>
-    <input name="name" type="text" value="{{name}}">
+<div class="control-group">
+    <label class="control-label" for="name">姓名</label>
+    <div class="controls">
+        <input name="name" type="text" class="field" value="{{name}}">
+    </div>
 </div>
-<div>
-    <label for="role">角色</label>
-    <label><input name="role" type="radio" value="root">root</label>
+<div class="control-group">
+    <label class="control-label" for="role">角色</label>
+    <div class="controls">
+        <label class="radio"><input name="role" type="radio" value="root">root</label>
+    </div>
 </div>
-<div>
-    <button id="J-worker-submit">添加</button>
+<div class="form-action">
+    <a href="#" id="J-worker-submit" class="btn btn-primary btn-small">添加</a>
 </div>

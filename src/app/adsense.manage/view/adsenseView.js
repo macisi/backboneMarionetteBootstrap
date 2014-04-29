@@ -8,14 +8,15 @@ define([
     "backbone",
     "marionette",
     "templates",
+    "app/componment/listView",
     "dialog"
-], function ($, _, Backbone, Marionette, tpl, dialog) {
+], function ($, _, Backbone, Marionette, tpl, ListView, dialog) {
     "use strict";
 
     var _events = {};
     _.extend(_events, Backbone.Events);
 
-    var AdsenseListView = Marionette.ItemView.extend({
+    var ItemView = Marionette.ItemView.extend({
         template: tpl["adsense_manage_list"],
         tagName: "tr",
         className: "J-row",
@@ -141,15 +142,15 @@ define([
         }
     });
 
-    var AdsenseTableView = Marionette.CompositeView.extend({
+    var AdsenseView = ListView.extend({
 
-        itemView: AdsenseListView,
+        itemView: ItemView,
 
         itemViewContainer: "tbody",
 
         template: tpl["adsense_manage_table"]
     });
 
-    return AdsenseTableView;
+    return AdsenseView;
 
 });

@@ -1,0 +1,47 @@
+{
+    "success": true,
+    "content": [
+        {
+            "id": "1",
+            "name": "首页轮播美食推广",
+            "action": "操作日志-列表",
+            "type": "查看",
+            "url": "/su/log",
+            "ad_id": "chongqing_cityEnterMouth_streamer_adv_980*60_5",
+            "ad_name": "重庆入城口中部横幅960*60-2",
+            "ad_sign": "重庆入城口中部横幅960*60-2",
+            "desc": "新建广告",
+            "user": "郭明娟",
+            "time": "2014-04-03 14:10:50",
+            "ip": "122.224.129.50"
+        },
+        {
+            "id": "2",
+            "name": "首页轮播美食推广",
+            "action": "操作日志-列表",
+            "type": "查看",
+            "url": "/su/log",
+            "ad_id": "chongqing_cityEnterMouth_streamer_adv_980*60_5",
+            "ad_name": "重庆入城口中部横幅960*60-2",
+            "ad_sign": "重庆入城口中部横幅960*60-2",
+            "desc": "新建广告",
+            "user": "郭明娟",
+            "time": "2014-04-03 14:10:50",
+            "ip": "122.224.129.50"
+        },
+        {
+            "id": "3",
+            "name": "首页轮播美食推广",
+            "action": "操作日志-列表",
+            "type": "查看",
+            "url": "/su/log",
+            "ad_id": "chongqing_cityEnterMouth_streamer_adv_980*60_5",
+            "ad_name": "重庆入城口中部横幅960*60-2",
+            "ad_sign": "重庆入城口中部横幅960*60-2",
+            "desc": "新建广告",
+            "user": "郭明娟",
+            "time": "2014-04-03 14:10:50",
+            "ip": "122.224.129.50"
+        }
+    ]
+}

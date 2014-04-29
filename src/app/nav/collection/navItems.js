@@ -34,6 +34,43 @@ define(["backbone"], function(Backbone){
             ]
         },
         {
+            type: "广告管理",
+            list: [
+                {
+                    name: "新建广告位",
+                    path: "adpos/new"
+                },
+                {
+                    name: "广告位管理",
+                    path: "adpos/manage"
+                },
+                {
+                    name: "广告管理",
+                    path: "ad/manage"
+                },
+                {
+                    name: "广告审核",
+                    path: "ad/audit"
+                },
+                {
+                    name: "商家消费明细",
+                    path: "business/detail"
+                },
+                {
+                    name: "广告操作日志",
+                    path: "ad/log"
+                },
+                {
+                    name: "广告点击数据",
+                    path: "ad/click"
+                },
+                {
+                    name: "广告浏览数据",
+                    path: "ad/browse"
+                }
+            ]
+        },
+        {
             type: "我的广告",
             list: [
                 {

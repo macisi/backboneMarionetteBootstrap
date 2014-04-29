@@ -13,7 +13,7 @@ define([
 ], function(Backbone, Marionette, _, Controller, modules){
    "use strict";
 
-    var App = new Marionette.Application();
+    var App = window.App = new Marionette.Application();
     var $body = $("#J-body");
 
     App.addInitializer(function(){
@@ -62,6 +62,12 @@ define([
     };
     App.navRegion.unhide = function(){
         $body.removeClass("expansion");
+    };
+
+    //global error config
+    App.showError = function(data, callback){
+        console.log(data);
+        setTimeout(callback, 2000);
     };
 
     return App;

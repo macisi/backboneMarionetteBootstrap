@@ -21,7 +21,8 @@
             "dialog-config": "lib/artDialog/dialog-config",
             "text": "lib/text",
             "json": "lib/json2.min",
-            "pikaday": "lib/datepicker/pikaday"
+            "pikaday": "lib/datepicker/pikaday",
+            "placeholder": "lib/placeholder/jquery.placeholder"
         },
 
         shim: {
