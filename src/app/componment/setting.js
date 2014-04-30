@@ -6,8 +6,9 @@
 define([
     "underscore",
     "backbone",
-    "marionette"
-], function (_, Backbone, Marionette) {
+    "marionette",
+    "handlebars"
+], function (_, Backbone, Marionette, Handlebars) {
     "use strict";
 
     //TODO: for test

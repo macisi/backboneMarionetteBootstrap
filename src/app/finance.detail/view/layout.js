@@ -3,16 +3,15 @@
  * @date: 2014/4/23
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/finance.detail/view/detailView",
     "app/finance.detail/model/detail"
-], function (Marionette, tpl, DetailView, Detail) {
+], function (BaseLayout, DetailView, Detail) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["finance_detail_layout"],
+        name: "financeDetail",
 
         regions: {
             financeDetail: "#J-finance-detail"

@@ -10,9 +10,24 @@ body {
   height: @headHeight;
   background: url("@{img}header-bg.png") right top no-repeat;
   border-bottom: 1px solid @globalBorderColor;
+  .logo {
+    @width: 213px;
+    @height: 44px;
+    float: left;
+    margin: 10px 0 0 10px;
+    width: @width;
+    height: @height;
+    background: url("@{img}logo-beta.png") no-repeat;
+    a {
+      display: block;
+      width: @width;
+      height: @height;
+      text-indent: -999em;
+    }
+  }
   .link {
     float: left;
-    margin-left: 300px;
+    margin-left: 80px;
     padding-top: 26px;
     width: 225px;
     a {

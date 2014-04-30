@@ -1,0 +1,45 @@
+{
+    "success": true,
+    "content": [
+        {
+            "id": "001",
+            "name": "亲子",
+            "category": "亲子",
+            "type": "精准匹配",
+            "prop": "孕产期",
+            "rule": "",
+            "threshold": "0.864",
+            "count": "2"
+        },
+        {
+            "id": "002",
+            "name": "亲子",
+            "category": "亲子",
+            "type": "精准匹配",
+            "prop": "孕产期",
+            "rule": "",
+            "threshold": "0.864",
+            "count": "2"
+        },
+        {
+            "id": "003",
+            "name": "亲子",
+            "category": "亲子",
+            "type": "精准匹配",
+            "prop": "孕产期",
+            "rule": "",
+            "threshold": "0.864",
+            "count": "2"
+        },
+        {
+            "id": "004",
+            "name": "亲子",
+            "category": "亲子",
+            "type": "精准匹配",
+            "prop": "孕产期",
+            "rule": "",
+            "threshold": "0.864",
+            "count": "2"
+        }
+    ]
+}

@@ -3,16 +3,15 @@
  * @date: 2014/4/23
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/finance.manage/view/manageView",
     "app/finance.manage/model/manage"
-], function (Marionette, tpl, ManageView, Manage) {
+], function (BaseLayout, ManageView, Manage) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["finance_manage_layout"],
+        name: "financeManage",
 
         regions: {
             financeManage: "#J-finance-manage"

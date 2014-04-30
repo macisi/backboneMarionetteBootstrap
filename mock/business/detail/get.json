@@ -1,0 +1,38 @@
+{
+    "success": true,
+    "content": [
+        {
+            "id": "1",
+            "nickname": "天空漫步",
+            "date": "2014-04-03",
+            "ad_id": "chongqing_cityEnterMouth_streamer_adv_980*60_5",
+            "ad_name": "重庆入城口中部横幅960*60-2",
+            "status": true,
+            "deliveryId": "1234568",
+            "cost": "1000.00",
+            "actioner": "某某某"
+        },
+        {
+            "id": "2",
+            "nickname": "天空漫步",
+            "date": "2014-04-03",
+            "ad_id": "chongqing_cityEnterMouth_streamer_adv_980*60_5",
+            "ad_name": "重庆入城口中部横幅960*60-2",
+            "status": false,
+            "deliveryId": "1234568",
+            "cost": "1000.00",
+            "actioner": "某某某"
+        },
+        {
+            "id": "3",
+            "nickname": "天空漫步",
+            "date": "2014-04-03",
+            "ad_id": "chongqing_cityEnterMouth_streamer_adv_980*60_5",
+            "ad_name": "重庆入城口中部横幅960*60-2",
+            "status": false,
+            "deliveryId": "1234568",
+            "cost": "1000.00",
+            "actioner": "某某某"
+        }
+    ]
+}

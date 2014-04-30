@@ -3,16 +3,15 @@
  * @date: 2014/4/24
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/intro/view/introView",
     "app/intro/model/introModel"
-], function (Marionette, tpl, IntroView, IntroModel) {
+], function (BaseLayout, IntroView, IntroModel) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["intro_layout"],
+        name: "intro",
 
         regions: {
             introRegion: "#J-intro"

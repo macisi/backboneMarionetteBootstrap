@@ -2,18 +2,17 @@
  * Created by biangang on 2014/4/16.
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/system.worker/view/workerFormView",
     "app/system.worker/view/workerListView",
     "app/system.worker/model/worker",
     "app/system.worker/collection/workerLists"
-], function(Marionette, tpl, WorkerFormView, WorkerTableView, Worker, WorkerLists){
+], function(BaseLayout, WorkerFormView, WorkerTableView, Worker, WorkerLists){
    "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["system_worker_layout"],
+        name: "systemWorker",
 
         regions: {
             workerForm: "#J-worker-form",

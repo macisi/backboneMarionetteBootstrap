@@ -3,16 +3,14 @@
  * @date: 2014/4/22
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/ad.manage/view/adView",
     "app/ad.manage/collection/ads"
-], function (Marionette, tpl, AdView, Ads) {
+], function (BaseLayout, AdView, Ads) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
-
-        template: tpl["ad_manage_layout"],
+    var Layout = BaseLayout.extend({
+        name: "adManage",
 
         regions: {
             listRegion: "#J-list"

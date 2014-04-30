@@ -5,8 +5,7 @@
  * 1. 修改的时候也进这里 需要填数据
  */
 define([
-    "templates",
-    "marionette",
+    "baseLayout",
     "underscore",
     "app/adsense.new/model/step1",
     "app/adsense.new/view/stepView1",
@@ -16,12 +15,12 @@ define([
     "app/adsense.new/view/stepView3",
     "app/adsense.new/model/step4",
     "app/adsense.new/view/stepView4"
-], function (tpl, Marionette, _, Step1, StepView1, Step2, StepView2, Step3, StepView3, Step4, StepView4) {
+], function (BaseLayout, _, Step1, StepView1, Step2, StepView2, Step3, StepView3, Step4, StepView4) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["adsense_new_layout"],
+        name: "adsenseNew",
 
         regions: {
             stepRegion: "#J-adsense-form"

@@ -1,0 +1,19 @@
+{
+    "success": true,
+    "content": {
+        "industry": "电商",
+        "sub_industry": "亲子",
+        "provinceId": "浙江省",
+        "cityId": "杭州市",
+        "districtId": "西湖区",
+        "street": "文三路东部软件园",
+        "invoice": "杭州十九楼",
+        "postcode": "310000",
+        "name": "李四",
+        "mobile": "13512345678",
+        "qq": "8888",
+        "role": "商家",
+        "sales": "某某人",
+        "contact": true
+    }
+}

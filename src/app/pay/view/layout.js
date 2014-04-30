@@ -3,16 +3,15 @@
  * @date: 2014/4/24
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/pay/view/payView",
     "app/pay/model/payModel"
-], function (Marionette, tpl, PayView, PayModel) {
+], function (BaseLayout, PayView, PayModel) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["pay_layout"],
+        name: "pay",
 
         regions: {
             payRegion: "#J-pay"

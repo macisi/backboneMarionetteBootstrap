@@ -3,16 +3,14 @@
  * @date: 2014/4/29
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/ad.click/view/clickView",
     "app/ad.click/collection/clicks"
-], function (Marionette, tpl, ClickView, Clicks) {
+], function (BaseLayout, ClickView, Clicks) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
-
-        template: tpl["ad_click_layout"],
+    var Layout = BaseLayout.extend({
+        name: "adClick",
 
         regions: {
             clickDetail: "#J-click-detail"

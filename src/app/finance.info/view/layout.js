@@ -3,16 +3,15 @@
  * @date: 2014/4/23
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/finance.info/view/infoFormView",
     "app/finance.info/model/infoForm"
-], function (Marionette, tpl, InfoFormView, InfoForm) {
+], function (BaseLayout, InfoFormView, InfoForm) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["finance_info_layout"],
+        name: "financeInfo",
 
         regions: {
             infoForm: "#J-info-form"

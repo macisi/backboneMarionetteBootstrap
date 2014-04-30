@@ -12,10 +12,13 @@ define([
         className: "nav-container",
         itemView: NavItemView,
         setCurrentNav: function(path){
-            console.log(path)
             var _this = this;
+            if (path.indexOf("?type") === -1) {
+                path = path.split("?")[0];
+            }
+            console.log(path)
             this.$el.find(".nav-block li").each(function(index, li){
-                if (path.indexOf($(li).data("path")) !== -1) {
+                if (path === $(li).data("path")) {
                     _this.$cur && _this.$cur.removeClass("cur");
                     $(li).addClass("cur");
                     _this.$cur = $(li);

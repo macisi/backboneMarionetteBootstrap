@@ -16,7 +16,7 @@
 <td>{{remark}}</td>
 <td>
     <div>
-        <a href="#">修改</a>
+        <a href="#business/edit?id={{id}}">修改</a>
         <a href="#" class="J-unpass">不通过</a>
     </div>
     <div>

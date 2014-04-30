@@ -1,0 +1,33 @@
+{
+    "success": true,
+    "content": [
+        {
+            "id": "001",
+            "name": "亲子",
+            "category": "亲子",
+            "type": "目录",
+            "minPrice": "1.00"
+        },
+        {
+            "id": "002",
+            "name": "亲子",
+            "category": "亲子",
+            "type": "目录",
+            "minPrice": "1.00"
+        },
+        {
+            "id": "003",
+            "name": "亲子",
+            "category": "亲子",
+            "type": "目录",
+            "minPrice": "1.00"
+        },
+        {
+            "id": "004",
+            "name": "亲子",
+            "category": "亲子",
+            "type": "目录",
+            "minPrice": "1.00"
+        }
+    ]
+}

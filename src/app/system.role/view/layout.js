@@ -2,18 +2,17 @@
  * Created by biangang on 2014/4/16.
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/system.role/view/roleFormView",
     "app/system.role/view/roleListView",
     "app/system.role/model/role",
     "app/system.role/collection/roleLists"
-], function(Marionette, tpl, RoleFormView, RoleTableView, Role, RoleLists){
+], function(BaseLayout, RoleFormView, RoleTableView, Role, RoleLists){
    "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["system_role_layout"],
+        name: "systemRole",
 
         regions: {
             roleForm: "#J-role-form",

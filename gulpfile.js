@@ -88,8 +88,9 @@ gulp.task('build', ['pre-build'], function() {
             'drag': 'src/lib/artDialog/drag',
             'dialog-config': 'src/lib/artDialog/dialog-config',
             'json': 'src/lib/json2.min',
-            'pikaday': 'src/lib/datepicker/pikaday',
-            "placeholder": "src/lib/placeholder/jquery.placeholder"
+            'datepicker': 'src/lib/datepicker/bootstrap-datepicker',
+            "placeholder": "src/lib/placeholder/jquery.placeholder",
+            "baseLayout": "src/app/componment/base/baseLayout"
         },
         include: ['json'],
         exclude: ['jquery'],

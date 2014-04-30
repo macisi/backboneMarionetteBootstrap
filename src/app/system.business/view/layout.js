@@ -3,16 +3,15 @@
  * @date: 2014/4/29
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/system.business/view/businessView",
     "app/system.business/collection/businesses"
-], function (Marionette, tpl, BusinessView, Businesses) {
+], function (BaseLayout, BusinessView, Businesses) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["system_business_layout"],
+        name: "systemBusiness",
 
         regions: {
             Detail: "#J-detail"

@@ -3,16 +3,14 @@
  * @date: 2014/4/29
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/ad.browse/view/browseView",
     "app/ad.browse/collection/browses"
-], function (Marionette, tpl, BrowseView, Browses) {
+], function (BaseLayout, BrowseView, Browses) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
-
-        template: tpl["ad_browse_layout"],
+    var Layout = BaseLayout.extend({
+        name: "adBrowse",
 
         regions: {
             browseDetail: "#J-browse-detail"

@@ -3,16 +3,15 @@
  * @date: 2014/4/22
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/adsense.manage/view/adsenseView",
     "app/adsense.manage/collection/adsenseLists"
-], function (Marionette, tpl, AdsenseView, AdsenseLists) {
+], function (BaseLayout, AdsenseView, AdsenseLists) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
+    var Layout = BaseLayout.extend({
 
-        template: tpl["adsense_manage_layout"],
+        name: "adsenseManage",
 
         regions: {
             adsenseList: "#J-adsense-list"

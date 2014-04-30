@@ -6,8 +6,8 @@ define([
     "underscore",
     "templates",
     "marionette",
-    "pikaday"
-], function (_, tpl, Marionette, Pikaday) {
+    "datepicker"
+], function (_, tpl, Marionette) {
     "use strict";
 
     var StepView1 = Marionette.ItemView.extend({
@@ -30,19 +30,11 @@ define([
         },
         onShow: function(){
             this.delegateEvents();
-            var _this = this;
-            this.pickers = [];
-            this.$("input[data-bind='datepicker']").each(function(){
-                _this.pickers.push(new Pikaday({
-                    field: this,
-                    minDate: new Date()
-                }));
-            });
+            this.$datepickers = this.$("input[data-bind='datepicker']");
+            this.$datepickers.datepicker();
         },
         onClose: function(){
-            _.forEach(this.pickers, function(picker){
-                picker.destroy();
-            });
+            this.$datepickers.datepicker("remove");
         }
     });
 

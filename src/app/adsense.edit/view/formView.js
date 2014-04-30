@@ -8,8 +8,6 @@ define(["marionette", "templates", "app/adsense.edit/model/form"], function (Mar
     var FormView = Marionette.ItemView.extend({
         template: tpl["adsense_edit_form"],
         initialize: function(){
-            console.log(this);
-            this.render();
         }
     });
 

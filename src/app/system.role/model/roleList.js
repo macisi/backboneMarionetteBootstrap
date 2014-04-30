@@ -5,7 +5,7 @@
 define(["backbone"], function(Backbone){
     "use strict";
 
-    var AdsenseList = Backbone.Model.extend({
+    var RoleList = Backbone.Model.extend({
         defaults: {
             name: "",
             description: ""
@@ -14,6 +14,6 @@ define(["backbone"], function(Backbone){
         }
     });
 
-    return AdsenseList;
+    return RoleList;
 
 });

@@ -3,16 +3,14 @@
  * @date: 2014/4/29
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/ad.log/view/logView",
     "app/ad.log/collection/logs"
-], function (Marionette, tpl, LogView, Logs) {
+], function (BaseLayout, LogView, Logs) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
-
-        template: tpl["ad_log_layout"],
+    var Layout = BaseLayout.extend({
+        name: "adLog",
 
         regions: {
             logDetail: "#J-log-list"

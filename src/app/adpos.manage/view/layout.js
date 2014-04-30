@@ -3,16 +3,14 @@
  * @date: 2014/4/22
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/adpos.manage/view/posView",
     "app/adpos.manage/collection/poses"
-], function (Marionette, tpl, PosView, Poses) {
+], function (BaseLayout, PosView, Poses) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
-
-        template: tpl["adpos_manage_layout"],
+    var Layout = BaseLayout.extend({
+        name: "adposManage",
 
         regions: {
             listRegion: "#J-adpos-list"

@@ -3,15 +3,14 @@
  * @date: 2014/4/29
  */
 define([
-    "marionette",
-    "templates",
+    "baseLayout",
     "app/adsense.edit/view/formView",
     "app/adsense.edit/model/form"
-], function (Marionette, tpl, FormView, Form) {
+], function (BaseLayout, FormView, Form) {
     "use strict";
 
-    var Layout = Marionette.Layout.extend({
-        template: tpl["adsense_edit_layout"],
+    var Layout = BaseLayout.extend({
+        name: "adsenseEdit",
 
         regions: {
             formRegion: "#J-form"
